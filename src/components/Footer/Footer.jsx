@@ -22,11 +22,6 @@ const Footer = () => {
         "Reg. Office & Godown:- Kh. No.1090, Vikas Nagar, Meerut Road, Ghaziabad-201001 (U.P.) INDIA ",
       phone: "9440406200, 9849059508",
     },
-    {
-      name: "Reg. Office & Godown",
-      address:
-        "Kh. No.1090, Vikas Nagar, Meerut Road, Ghaziabad-201001 (U.P.) INDIA ",
-    },
   ];
 
   const socialLinks = [
@@ -49,13 +44,15 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-6">
-            <img
-              src="/logo.png"
-              alt="Krishna Poultry Equipment Logo"
-              className="h-12 w-auto"
-            />
-            <nav>
+          <div className="flex flex-col">
+            <div className="mb-6">
+              <img
+                src="/logo.png"
+                alt="Krishna Poultry Equipment Logo"
+                className="h-12 w-auto"
+              />
+            </div>
+            <nav className="flex-grow">
               <ul className="space-y-3">
                 {navLinks.map((link) => (
                   <li key={link.label}>
@@ -72,49 +69,49 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="text-white text-lg font-semibold">Contact Us</h3>
-            <div className="space-y-4">
-              {locations.map((location) => (
-                <div key={location.name} className="space-y-2">
-                  <h4 className="font-medium text-white">{location.name}</h4>
-                  <p className="text-sm flex items-start space-x-2">
-                    <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
+          <div className="flex flex-col">
+            <h3 className="text-white text-lg font-semibold mb-6">Contact Us</h3>
+            <div className="space-y-4 flex-grow">
+              {locations.map((location, index) => (
+                <div key={index} className="space-y-2">
+                  {location.name && <h4 className="font-medium text-white">{location.name}</h4>}
+                  <div className="text-sm flex items-start">
+                    <MapPin className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" />
                     <span>{location.address}</span>
-                  </p>
+                  </div>
                   {location.phone && (
-                    <p className="text-sm flex items-center space-x-2">
-                      <Phone className="h-5 w-5" />
+                    <div className="text-sm flex items-center">
+                      <Phone className="h-5 w-5 mr-2 flex-shrink-0" />
                       <span>{location.phone}</span>
-                    </p>
+                    </div>
                   )}
                 </div>
               ))}
-              <p className="text-sm flex items-center space-x-2">
-                <Mail className="h-5 w-5" />
+              <div className="text-sm flex items-center">
+                <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
                 <a
                   href="mailto:krishnatraders1997@gmail.com"
                   className="hover:text-white"
                 >
                   krishnatraders1997@gmail.com
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 
           {/* Business Hours */}
-          <div className="space-y-6">
-            <h3 className="text-white text-lg font-semibold">Opening Hours</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <Clock className="h-5 w-5 mt-0.5" />
+          <div className="flex flex-col">
+            <h3 className="text-white text-lg font-semibold mb-6">Opening Hours</h3>
+            <div className="space-y-4 flex-grow">
+              <div className="flex items-start">
+                <Clock className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" />
                 <div>
                   <p>Monday - Saturday</p>
                   <p className="text-gray-400">9:00 AM - 9:00 PM</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <Clock className="h-5 w-5 mt-0.5" />
+              <div className="flex items-start">
+                <Clock className="h-5 w-5 mt-0.5 mr-2 flex-shrink-0" />
                 <div>
                   <p>Sunday</p>
                   <p className="text-gray-400">10:00 AM - 8:00 PM</p>
@@ -124,18 +121,19 @@ const Footer = () => {
           </div>
 
           {/* Map */}
-          <div className="space-y-6">
-            <h3 className="text-white text-lg font-semibold">Location</h3>
-            <div style={{ width: "100%" }}>
+          <div className="flex flex-col">
+            <h3 className="text-white text-lg font-semibold mb-6">Location</h3>
+            <div className="w-full h-64 lg:h-80 flex-grow">
               <iframe
                 width="100%"
-                height="400"
+                height="100%"
                 frameBorder="0"
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kh.%20No.1090,%20Vikas%20Nagar,%20Meerut%20Road,%20Ghaziabad-201001+(poultry%20farming)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 title="Location Map"
+                className="rounded"
               >
                 <a href="https://www.gps.ie/collections/drones/">
                   drone quadcopter
@@ -147,8 +145,8 @@ const Footer = () => {
 
         {/* Social Links & Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -160,7 +158,7 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm text-center md:text-right">
               © {currentYear} Krishna Poultry Equipment. All rights reserved.
             </p>
           </div>

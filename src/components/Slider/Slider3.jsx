@@ -21,8 +21,9 @@ const ProductAutoSlider = () => {
   const slides = [
     {
       id: 1,
-      title: "Welcome To Krishna Poultry Equipments & Trader",
-      subtitle: "REPUTABLE MANUFACTURERS, EXPORTERS, DEALERS & SUPPLIERS OF POULTRY EQUIPMENT",
+      title: "Welcome To Krishna Poultry Equipments ",
+      
+      // subtitle: "REPUTABLE MANUFACTURERS, EXPORTERS, DEALERS & SUPPLIERS OF POULTRY EQUIPMENT",
       products: [
         { url: BasinChickDrinker, name: "GROWER DRINKER (8 LTR)" },
         { url: flamegun, name: "CHICK DRINKER (3 LTR)" },
@@ -251,9 +252,10 @@ const ProductAutoSlider = () => {
               <div className="relative w-full h-full flex flex-col z-10">
                 {/* Enhanced Slide Header with better typography and glow effect */}
                 <div className="text-center py-8 sm:py-10 md:py-12 px-3 sm:px-4">
-                  <h2 className="slide-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-amber-50 mb-3 sm:mb-4 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] tracking-wide">
-                    {slide.title}
-                  </h2>
+                <h2 className="slide-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-3 sm:mb-4 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] tracking-wide mx-20">
+  {slide.title}
+</h2>
+
                   <p className="slide-subtitle text-sm sm:text-base md:text-lg text-blue-50 max-w-3xl mx-auto px-2 font-medium drop-shadow-md tracking-wider bg-black/30 py-2 rounded-lg inline-block">
                     {slide.subtitle}
                   </p>
