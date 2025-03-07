@@ -19,11 +19,12 @@ const FloatingActionFooter = () => {
 
       {/* Phone Call Button */}
       <a
-        href="tel:+yourphonenumber"
-        className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
-      >
-        <FaPhoneAlt size={24} />
-      </a>
+  href="tel:+9440406200"
+  className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600"
+>
+  <FaPhoneAlt size={24} />
+</a>
+
 
       {/* Scroll to Top Button */}
       <button
