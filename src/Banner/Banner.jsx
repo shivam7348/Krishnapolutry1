@@ -44,7 +44,7 @@ const Banner = ({ title, image, breadcrumbItems, subtitle }) => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative pt-32 pb-36 bg-cover bg-center overflow-hidden group"
+      className="relative pt-32 pb-36 bg-cover bg-center bg-no-repeat overflow-hidden group"
       style={{
         backgroundImage: `url(${image})`,
       }}

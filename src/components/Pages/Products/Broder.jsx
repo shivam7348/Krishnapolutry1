@@ -19,18 +19,18 @@ const BroaderShowcase = () => {
       src: gasbrooder,
       alt: "Broader System 1",
     },
-    // {
-    //   src: broader2,
-    //   alt: "Broader System 2",
-    // },
-    // {
-    //   src: broader3,
-    //   alt: "Broader System 3",
-    // },
-    // {
-    //   src: broader4,
-    //   alt: "Broader System 4",
-    // },
+    {
+      src: "https://m.media-amazon.com/images/I/41SO8i3tqGL._AC_UF1000,1000_QL80_.jpg",
+      alt: "Broader System 2",
+    },
+    {
+      src: "https://m.media-amazon.com/images/I/61dg9an+YNL.jpg",
+      alt: "Broader System 3",
+    },
+    {
+      src: "https://images-eu.ssl-images-amazon.com/images/I/61dca+HX4sL._AC_UL600_SR600,600_.jpg",
+      alt: "Broader System 4",
+    },
   ];
 
   const features = [

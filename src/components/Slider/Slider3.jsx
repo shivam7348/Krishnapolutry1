@@ -17,11 +17,11 @@ import slider2 from "../Slider/slider2.png";
 import slider3 from "../Slider/slider4.png";
 
 const ProductAutoSlider = () => {
-  // Product data with images, titles, and descriptions
+ 
   const slides = [
     {
       id: 1,
-      title: "POULTRY EQUIPMENT",
+      title: "Welcome To Krishna Poultry Equipments & Trader",
       subtitle: "REPUTABLE MANUFACTURERS, EXPORTERS, DEALERS & SUPPLIERS OF POULTRY EQUIPMENT",
       products: [
         { url: BasinChickDrinker, name: "GROWER DRINKER (8 LTR)" },
@@ -228,7 +228,7 @@ const ProductAutoSlider = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="relative w-full h-auto min-h-[550px] sm:min-h-[600px] md:min-h-[650px] ">
+        <div className="relative w-full h-auto min-h-[550px] sm:min-h-[600px] md:min-h-[650px]">
           {slides.map((slide, slideIndex) => (
             <div
               key={slide.id}
@@ -236,7 +236,7 @@ const ProductAutoSlider = () => {
               className="absolute inset-0 w-full h-full"
               aria-hidden={slideIndex !== currentIndex}
             >
-              {/* Background Image with Overlay */}
+              {/* Background Image with Enhanced Gradient Overlay */}
               <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img 
                   src={slide.bgImage} 
@@ -244,34 +244,34 @@ const ProductAutoSlider = () => {
                   className="w-full h-full object-cover"
                   aria-hidden="true"
                 />
-                {/* Semi-transparent overlay to ensure text readability */}
-                <div className="absolute inset-0 bg-white/20"></div>
+                {/* Rich gradient overlay for better depth and enhanced text visibility */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/65"></div>
               </div>
               
               <div className="relative w-full h-full flex flex-col z-10">
-                {/* Slide Header */}
-                <div className="text-center py-6 sm:py-8 md:py-10 px-3 sm:px-4">
-                  <h2 className="slide-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-2 sm:mb-3">
+                {/* Enhanced Slide Header with better typography and glow effect */}
+                <div className="text-center py-8 sm:py-10 md:py-12 px-3 sm:px-4">
+                  <h2 className="slide-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-amber-50 mb-3 sm:mb-4 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] tracking-wide">
                     {slide.title}
                   </h2>
-                  <p className="slide-subtitle text-sm sm:text-base md:text-lg text-white max-w-3xl mx-auto px-2">
+                  <p className="slide-subtitle text-sm sm:text-base md:text-lg text-blue-50 max-w-3xl mx-auto px-2 font-medium drop-shadow-md tracking-wider bg-black/30 py-2 rounded-lg inline-block">
                     {slide.subtitle}
                   </p>
                 </div>
                 
-                {/* Products Container */}
+                {/* Products Container with enhanced styling */}
                 <div className="flex-1 flex items-center justify-center px-2 sm:px-4 md:px-6 pb-12">
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 w-full max-w-6xl">
+                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full max-w-6xl">
                     {slide.products.map((product, index) => (
                       <div key={index} className="product-item flex flex-col items-center">
-                        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-4 mb-2 sm:mb-3 w-full h-32 sm:h-40 md:h-48 flex items-center justify-center hover:shadow-xl transition-shadow duration-300">
+                        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-4 mb-2 sm:mb-3 w-full h-32 sm:h-40 md:h-48 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100">
                           <img
                             src={product.url}
                             alt={product.name}
                             className="max-h-full max-w-full object-contain"
                           />
                         </div>
-                        <h3 className="text-xs sm:text-sm font-medium text-center px-1">{product.name}</h3>
+                        <h3 className="text-xs sm:text-sm font-medium text-center bg-white/90 px-3 py-1.5 rounded text-gray-800 shadow-md tracking-wide">{product.name}</h3>
                       </div>
                     ))}
                   </div>
@@ -280,39 +280,39 @@ const ProductAutoSlider = () => {
             </div>
           ))}
 
-          {/* Navigation Arrows - Responsive design */}
+          {/* Enhanced Navigation Arrows with better visibility */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-amber-100"
             disabled={isAnimating}
             aria-label="Previous slide"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition hover:scale-110 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-amber-100"
             disabled={isAnimating}
             aria-label="Next slide"
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Navigation Dots - Improved for mobile */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
+          {/* Enhanced Navigation Dots with better visibility and interaction */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4 z-10">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 shadow-md ${
                   currentIndex === index 
-                    ? "bg-red-600 scale-125" 
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "bg-amber-500 scale-125 ring-2 ring-white/50" 
+                    : "bg-gray-300/80 hover:bg-amber-300"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
                 aria-current={currentIndex === index ? "true" : "false"}
@@ -320,18 +320,18 @@ const ProductAutoSlider = () => {
             ))}
           </div>
 
-          {/* Progress Bar */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 origin-left">
+          {/* Enhanced Progress Bar with better visibility */}
+          <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gray-200/50">
             <div
               ref={progressBarRef}
-              className="h-full bg-red-600 origin-left transform scale-x-0"
+              className="h-full bg-amber-500 origin-left transform scale-x-0"
             />
           </div>
         </div>
       </div>
 
-      {/* Mobile Swipe Indicator */}
-      <div className="block sm:hidden text-center text-xs text-gray-500 italic py-2">
+      {/* Enhanced Mobile Swipe Indicator */}
+      <div className="block sm:hidden text-center text-xs text-amber-700 font-medium py-2 bg-amber-50 rounded-b-lg">
         Swipe left/right to navigate
       </div>
     </div>

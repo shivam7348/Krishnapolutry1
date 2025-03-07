@@ -126,15 +126,22 @@ const Footer = () => {
           {/* Map */}
           <div className="space-y-6">
             <h3 className="text-white text-lg font-semibold">Location</h3>
-            {/* <div className="rounded-lg overflow-hidden">
+            <div style={{ width: "100%" }}>
               <iframe
-                className="w-full h-48"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15503130.135087622!2d79.097002!3d18.440857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccdfd080c233b3%3A0xdffdfa7ea808c2b6!2sSai%20krishna%20poultry%20equipments!5e0!3m2!1sen!2sin!4v1731940118279!5m2!1sen!2sin"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Krishna Poultry Equipment Location"
-              />
-            </div> */}
+                width="100%"
+                height="600"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Kh.%20No.1090,%20Vikas%20Nagar,%20Meerut%20Road,%20Ghaziabad-201001+(poultry%20farming)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                title="Location Map"
+              >
+                <a href="https://www.gps.ie/collections/drones/">
+                  drone quadcopter
+                </a>
+              </iframe>
+            </div>
           </div>
         </div>
 

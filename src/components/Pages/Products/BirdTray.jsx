@@ -13,18 +13,19 @@ const BirdTrayShowcase = () => {
       src: "https://rukminim2.flixcart.com/image/850/1000/xif0q/bird-feeder/j/z/i/1-poultry-food-tray-for-pigeon-chicken-and-pets-garden-outdoor-original-imagzyms5kmzmr43.jpeg?q=90&crop=false", // Replace with your actual image paths
       alt: "Standard Bird Tray",
     },
-    // {
-    //   src: tray2,
-    //   alt: "Automatic Bird Tray",
-    // },
-    // {
-    //   src: tray3,
-    //   alt: "Large Capacity Tray",
-    // },
-    // {
-    //   src: tray4,
-    //   alt: "Portable Bird Tray",
-    // },
+    {
+      src: "https://m.media-amazon.com/images/I/51TpEAmUl9L.jpg",
+      alt: "Automatic Bird Tray",
+    },
+   
+    {
+      src: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQvudZ8IAIiE0g9YCoM3O-HEz_QkSXp4fLTu3EjlZsQGI1soHZ0_eDQEVqNBRci-GwUZu8XQv9TCyOrCxUEB7l-8kUJz_NI2UpyVkwNlG25wxTrpyilRF5y",
+      alt: "Portable Bird Tray",
+    },
+    {
+      src: "https://cpimg.tistatic.com/07812337/b/4/Egg-Tray.jpg",
+      alt: "Portable Bird Tray",
+    },
   ];
 
   const features = [
@@ -74,7 +75,7 @@ const BirdTrayShowcase = () => {
     <>
       <Banner
         title="Bird Tray"
-        image="https://example.com/bird-tray-banner.jpg" // Replace with your actual banner image
+        image="https://www.shutterstock.com/image-photo/group-little-birds-feeding-on-600nw-2514374507.jpg" // Replace with your actual banner image
         breadcrumbItems={breadcrumb}
       />
       <div className="bg-gradient-to-r from-[#9c95a1] via-[#e6a5a5] to-[#d9d8d7] min-h-screen">
