@@ -9,13 +9,13 @@ const FloatingActionFooter = () => {
     <div className="fixed bottom-4 right-4 flex flex-col gap-3">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/yourphonenumber"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600"
-      >
-        <FaWhatsapp size={24} />
-      </a>
+  href="https://wa.me/9440406200"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600"
+>
+  <FaWhatsapp size={24} />
+</a>
 
       {/* Phone Call Button */}
       <a
