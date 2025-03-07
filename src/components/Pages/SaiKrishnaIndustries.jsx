@@ -74,9 +74,7 @@ const PoultryEquipmentCompany = () => {
               </div>
               <h1 className="text-4xl font-bold text-gray-900">
                 Krishna Poultry Equipment
-                <span className="block text-red-600">
-                  Manufacturers & Traders
-                </span>
+                
               </h1>
               <p className="text-gray-600 leading-relaxed">
                 Pioneering innovation in poultry equipment from our base in

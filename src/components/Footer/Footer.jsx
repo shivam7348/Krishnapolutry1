@@ -129,7 +129,7 @@ const Footer = () => {
             <div style={{ width: "100%" }}>
               <iframe
                 width="100%"
-                height="600"
+                height="400"
                 frameBorder="0"
                 scrolling="no"
                 marginHeight="0"
