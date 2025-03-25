@@ -22,7 +22,7 @@ const TopProducts = () => {
       id: 3,
       name: "TURBO FEEDER",
       category: "FEEDER",
-      image: "https://images.meesho.com/images/products/131823987/eowr1_1200.jpg"
+      image: "https://vmpetsmart.com/wp-content/uploads/2022/07/10045276_l-1000x1000-1.webp"
     },
     {
       id: 4,
@@ -34,19 +34,19 @@ const TopProducts = () => {
         id: 5,
         name: "Medium Feeder (4.5 LTR)",
         category: "DRINKERS",
-        image: "https://www.vinayakpoultryindia.com/wp-content/uploads/2021/12/Medium-Feeder-min.png"
+        image: "https://m.media-amazon.com/images/I/31UF5pcHa7L._AC_UF1000,1000_QL80_.jpg"
       },
       {
         id: 6,
         name: "Chick Feeder (2.5 kg)",
         category: "Feeder",
-        image: "https://www.vinayakpoultryindia.com/wp-content/uploads/2021/12/Chick-Feeder-min-1.png"
+        image: "https://5.imimg.com/data5/SELLER/Default/2024/5/416190480/VU/JT/UI/35198948/broiler-feeder-500x500.png"
       },
       {
         id: 7,
         name: "Cage Feeder (0.5 kg)",
         category: "FEEDER",
-        image: "https://www.vinayakpoultryindia.com/wp-content/uploads/2021/12/Poultry-Cage-Feeder-min.png"
+        image: "https://5.imimg.com/data5/DW/UN/NC/SELLER-67339811/0-5-kg-baby-chick-feeder-500x500.jpg"
       },
       {
         id: 8,

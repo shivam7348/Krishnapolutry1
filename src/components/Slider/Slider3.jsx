@@ -17,44 +17,90 @@ import slider2 from "../Slider/slider2.png";
 import slider3 from "../Slider/slider4.png";
 
 const ProductAutoSlider = () => {
- 
   const slides = [
     {
       id: 1,
-      title: "Welcome To Krishna Poultry Equipments ",
-      
-      // subtitle: "REPUTABLE MANUFACTURERS, EXPORTERS, DEALERS & SUPPLIERS OF POULTRY EQUIPMENT",
+      title: "Krishna Poultry Equipments",
+      subtitle: "Premium Poultry Equipment Manufacturer & Supplier",
       products: [
-        { url: BasinChickDrinker, name: "GROWER DRINKER (8 LTR)" },
-        { url: flamegun, name: "CHICK DRINKER (3 LTR)" },
-        { url: jumboautomaticdrinkerclassic, name: "TURBO FEEDER" },
-        { url: SprinklerSmall, name: "ROUND FEEDER (10KG)" }
+        { 
+          url: "https://5.imimg.com/data5/SELLER/Default/2025/2/487080775/HY/BU/RP/121581144/poultry-grower-feeder-500x500.jpeg", 
+          name: "GROWER DRINKER (8 LTR)",
+          description: "High-capacity drinking solution for growing poultry"
+        },
+        { 
+          url: "https://s.alicdn.com/@sc04/kf/H47a0178cf0e9456db6c377e04836b7cep.jpg_720x720q50.jpg", 
+          name: "CHICK DRINKER (3 LTR)",
+          description: "Perfect for young chicks with easy access"
+        },
+        { 
+          url: "https://5.imimg.com/data5/SELLER/Default/2020/11/XG/II/NK/29753767/poultry-turbo-feeder-500x500.jpg", 
+          name: "TURBO FEEDER",
+          description: "Efficient feed distribution system"
+        },
+        { 
+          url: "https://5.imimg.com/data5/ANDROID/Default/2025/2/488443208/OF/VR/FO/42736512/product-jpeg-500x500.jpg", 
+          name: "ROUND FEEDER (10KG)",
+          description: "Large capacity circular feeding solution"
+        }
       ],
-      bgImage: slider1
+      bgImage: slider1,
     },
     {
       id: 2,
-      title: "FEEDERS & DRINKERS",
-      subtitle: "QUALITY POULTRY FEEDING & DRINKING SOLUTIONS",
+      title: "Feeders & Drinkers",
+      subtitle: "Premium Quality Poultry Feeding Solutions",
       products: [
-        { url: chickfeeder3kg, name: "CHICK FEEDER (3KG)" },
-        { url: nippledrinker, name: "NIPPLE DRINKER" },
-        { url: jumboautomaticdrinkerclassic, name: "AUTOMATIC DRINKER" },
-        { url: chickcrate, name: "CHICK CRATE" }
+        { 
+          url: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", 
+          name: "CHICK FEEDER (3KG)",
+          description: "Ideal starter feeder for young poultry"
+        },
+        { 
+          url: "https://img.agriexpo.online/images_ag/photo-mg/184647-12761593.jpg", 
+          name: "NIPPLE DRINKER",
+          description: "Hygienic water delivery system"
+        },
+        { 
+          url: "https://5.imimg.com/data5/SELLER/Default/2022/4/RF/FN/PD/105972358/plastic-deluxe-auto-poultry-drinker.png", 
+          name: "AUTOMATIC DRINKER",
+          description: "Self-regulating water supply"
+        },
+        { 
+          url: "https://www.totalplast.in/images/chick-box.jpg", 
+          name: "CHICK CRATE",
+          description: "Safe transport and handling"
+        }
       ],
-      bgImage: slider2
+      bgImage: slider2,
     },
     {
       id: 3,
-      title: "EQUIPMENT & TOOLS",
-      subtitle: "SPECIALIZED TOOLS FOR POULTRY MANAGEMENT",
+      title: "Equipment & Tools",
+      subtitle: "Specialized Poultry Management Tools",
       products: [
-        { url: vaccinator, name: "VACCINATOR" },
-        { url: flamegun, name: "FLAME GUN" },
-        { url: chickcrate, name: "TRANSPORT CRATE" },
-        { url: SprinklerSmall, name: "SPRINKLER" }
+        { 
+          url: "https://5.imimg.com/data5/SELLER/Default/2023/7/322490575/II/VK/XF/26543303/poultry-vaccination-gun-500x500.jpg", 
+          name: "VACCINATOR",
+          description: "Precision vaccination equipment"
+        },
+        { 
+          url: "https://5.imimg.com/data5/ANDROID/Default/2023/6/318247247/XY/HN/EY/42736512/product-jpeg.jpg", 
+          name: "FLAME GUN",
+          description: "Sanitation and disinfection tool"
+        },
+        { 
+          url: chickcrate, 
+          name: "TRANSPORT CRATE",
+          description: "Durable poultry transport solution"
+        },
+        { 
+          url: SprinklerSmall, 
+          name: "SPRINKLER",
+          description: "Cooling and misting system"
+        }
       ],
-      bgImage: slider3
+      bgImage: slider3,
     }
   ];
 
@@ -65,23 +111,22 @@ const ProductAutoSlider = () => {
   const slideContainerRef = useRef(null);
   const progressBarRef = useRef(null);
   const progressTl = useRef(null);
-  
-  // Touch navigation
   const touchRef = useRef({ startX: 0, endX: 0 });
-  
+
   // Initialize GSAP animations
   useEffect(() => {
-    // Set initial state
     gsap.set(slidesRef.current, {
       opacity: 0,
-      xPercent: 100
-    });
-    gsap.set(slidesRef.current[0], {
-      opacity: 1,
-      xPercent: 0
+      xPercent: 100,
+      zIndex: 0
     });
     
-    // Initialize progress bar animation
+    gsap.set(slidesRef.current[0], {
+      opacity: 1,
+      xPercent: 0,
+      zIndex: 1
+    });
+    
     updateProgressBar();
     
     return () => {
@@ -89,7 +134,7 @@ const ProductAutoSlider = () => {
     };
   }, []);
   
-  // Function to update progress bar
+  // Update progress bar animation
   const updateProgressBar = () => {
     if (progressTl.current) progressTl.current.kill();
     
@@ -105,12 +150,11 @@ const ProductAutoSlider = () => {
     }
   };
   
-  // Effect for auto-sliding
   useEffect(() => {
     updateProgressBar();
   }, [currentIndex, isPaused]);
   
-  // Handle slide change
+  // Handle slide transitions
   const goToSlide = (index) => {
     if (isAnimating || index === currentIndex) return;
     
@@ -122,19 +166,21 @@ const ProductAutoSlider = () => {
     // Animate out current slide
     gsap.to(currentSlide, {
       opacity: 0,
-      xPercent: -100 * direction,
-      duration: 0.8,
-      ease: "power2.inOut"
+      xPercent: -20 * direction,
+      scale: 0.95,
+      duration: 0.7,
+      ease: "power2.inOut",
+      zIndex: 0
     });
     
     // Animate in next slide
     gsap.fromTo(
       nextSlide,
-      { opacity: 0, xPercent: 100 * direction },
+      { opacity: 0, xPercent: 100 * direction, scale: 1, zIndex: 1 },
       {
         opacity: 1,
         xPercent: 0,
-        duration: 0.8,
+        duration: 0.7,
         ease: "power2.inOut",
         onComplete: () => {
           setIsAnimating(false);
@@ -143,36 +189,38 @@ const ProductAutoSlider = () => {
       }
     );
     
-    // Animate product items for the next slide
+    // Animate product items
     const productItems = nextSlide.querySelectorAll('.product-item');
     gsap.fromTo(
       productItems,
-      { y: 20, opacity: 0 },
+      { y: 30, opacity: 0 },
       { 
         y: 0, 
         opacity: 1, 
         duration: 0.6, 
         stagger: 0.1, 
         delay: 0.3,
-        ease: "back.out(1.2)" 
+        ease: "back.out(1.4)" 
       }
     );
     
-    // Animate the title and subtitle
+    // Animate text elements
     const title = nextSlide.querySelector('.slide-title');
     const subtitle = nextSlide.querySelector('.slide-subtitle');
     
     gsap.fromTo(
       title,
-      { y: -30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, delay: 0.2, ease: "back.out(1.5)" }
+      { y: 40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, delay: 0.2, ease: "power3.out" }
     );
     
-    gsap.fromTo(
-      subtitle,
-      { y: -20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, delay: 0.3, ease: "back.out(1.2)" }
-    );
+    if (subtitle) {
+      gsap.fromTo(
+        subtitle,
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, delay: 0.4, ease: "power3.out" }
+      );
+    }
   };
   
   const nextSlide = () => {
@@ -183,7 +231,7 @@ const ProductAutoSlider = () => {
     goToSlide(currentIndex === 0 ? slides.length - 1 : currentIndex - 1);
   };
   
-  // Touch handlers for swipe navigation
+  // Touch handlers
   const handleTouchStart = (e) => {
     touchRef.current.startX = e.touches[0].clientX;
   };
@@ -194,13 +242,11 @@ const ProductAutoSlider = () => {
   
   const handleTouchEnd = () => {
     const { startX, endX } = touchRef.current;
-    const threshold = 75; // Minimum distance for a swipe
+    const threshold = 50;
     
     if (startX - endX > threshold) {
-      // Swipe left - go to next slide
       nextSlide();
     } else if (endX - startX > threshold) {
-      // Swipe right - go to previous slide
       prevSlide();
     }
   };
@@ -213,7 +259,7 @@ const ProductAutoSlider = () => {
 
   return (
     <div 
-      className="w-full relative"
+      className="w-full relative overflow-hidden rounded-xl shadow-2xl"
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"
@@ -229,7 +275,7 @@ const ProductAutoSlider = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="relative w-full h-auto min-h-[550px] sm:min-h-[600px] md:min-h-[650px]">
+        <div className="relative w-full h-auto min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
           {slides.map((slide, slideIndex) => (
             <div
               key={slide.id}
@@ -237,43 +283,61 @@ const ProductAutoSlider = () => {
               className="absolute inset-0 w-full h-full"
               aria-hidden={slideIndex !== currentIndex}
             >
-              {/* Background Image with Enhanced Gradient Overlay */}
+              {/* Background Image with Gradient Overlay */}
               <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img 
                   src={slide.bgImage} 
                   alt="" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                   aria-hidden="true"
                 />
-                {/* Rich gradient overlay for better depth and enhanced text visibility */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/65"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/50"></div>
               </div>
               
               <div className="relative w-full h-full flex flex-col z-10">
-                {/* Enhanced Slide Header with better typography and glow effect */}
-                <div className="text-center py-8 sm:py-10 md:py-12 px-3 sm:px-4">
-                <h2 className="slide-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-3 sm:mb-4 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] tracking-wide mx-20">
-  {slide.title}
-</h2>
-
-                  <p className="slide-subtitle text-sm sm:text-base md:text-lg text-blue-50 max-w-3xl mx-auto px-2 font-medium drop-shadow-md tracking-wider bg-black/30 py-2 rounded-lg inline-block">
-                    {slide.subtitle}
-                  </p>
+                {/* Slide Header */}
+                <div className="text-center pt-12 pb-8 md:pt-16 md:pb-12 px-4">
+                  <h2 className="slide-title text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 tracking-tight leading-tight">
+                    {slide.title}
+                  </h2>
+                  {slide.subtitle && (
+                    <p className="slide-subtitle text-sm md:text-base text-white/90 max-w-2xl mx-auto font-medium tracking-wide">
+                      {slide.subtitle}
+                    </p>
+                  )}
                 </div>
                 
-                {/* Products Container with enhanced styling */}
-                <div className="flex-1 flex items-center justify-center px-2 sm:px-4 md:px-6 pb-12">
-                  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5 w-full max-w-6xl">
+                {/* Enhanced Products Grid */}
+                <div className="flex-1 flex items-center justify-center px-4 pb-16">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl px-4">
                     {slide.products.map((product, index) => (
-                      <div key={index} className="product-item flex flex-col items-center">
-                        <div className="bg-white rounded-lg shadow-lg p-2 sm:p-3 md:p-4 mb-2 sm:mb-3 w-full h-32 sm:h-40 md:h-48 flex items-center justify-center hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100">
-                          <img
-                            src={product.url}
-                            alt={product.name}
-                            className="max-h-full max-w-full object-contain"
-                          />
+                      <div 
+                        key={index} 
+                        className="product-item flex flex-col items-center group"
+                      >
+                        {/* Enhanced Product Card with White Background */}
+                        <div className="bg-white rounded-xl shadow-lg p-4 w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                          {/* Image Container with White Background */}
+                          <div className="bg-white rounded-lg p-3 flex-1 flex items-center justify-center mb-3">
+                            <img
+                              src={product.url}
+                              alt={product.name}
+                              className="max-h-[120px] md:max-h-[150px] w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                              loading="lazy"
+                            />
+                          </div>
+                          
+                          {/* Product Info */}
+                          <div className="text-center">
+                            <h3 className="text-sm md:text-base font-bold text-gray-800 mb-1">
+                              {product.name}
+                            </h3>
+                            <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+                              {product.description}
+                            </p>
+                           
+                          </div>
                         </div>
-                        <h3 className="text-xs sm:text-sm font-medium text-center bg-white/90 px-3 py-1.5 rounded text-gray-800 shadow-md tracking-wide">{product.name}</h3>
                       </div>
                     ))}
                   </div>
@@ -282,39 +346,39 @@ const ProductAutoSlider = () => {
             </div>
           ))}
 
-          {/* Enhanced Navigation Arrows with better visibility */}
+          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-amber-100"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
             disabled={isAnimating}
             aria-label="Previous slide"
           >
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+            <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2.5 sm:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transform transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-amber-500 border border-amber-100"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
             disabled={isAnimating}
             aria-label="Next slide"
           >
-            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+            <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Enhanced Navigation Dots with better visibility and interaction */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 sm:space-x-4 z-10">
+          {/* Navigation Dots */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 shadow-md ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   currentIndex === index 
-                    ? "bg-amber-500 scale-125 ring-2 ring-white/50" 
-                    : "bg-gray-300/80 hover:bg-amber-300"
+                    ? "bg-white scale-150" 
+                    : "bg-white/50 hover:bg-white/80"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
                 aria-current={currentIndex === index ? "true" : "false"}
@@ -322,19 +386,14 @@ const ProductAutoSlider = () => {
             ))}
           </div>
 
-          {/* Enhanced Progress Bar with better visibility */}
-          <div className="absolute bottom-0 left-0 w-full h-1.5 bg-gray-200/50">
+          {/* Progress Bar */}
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
             <div
               ref={progressBarRef}
-              className="h-full bg-amber-500 origin-left transform scale-x-0"
+              className="h-full bg-white origin-left transform scale-x-0"
             />
           </div>
         </div>
-      </div>
-
-      {/* Enhanced Mobile Swipe Indicator */}
-      <div className="block sm:hidden text-center text-xs text-amber-700 font-medium py-2 bg-amber-50 rounded-b-lg">
-        Swipe left/right to navigate
       </div>
     </div>
   );
