@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Factory, Users, Package } from "lucide-react";
-import chickfeeder3kg from "../Pages/fwdkrishnatradersproducts/chickfeeder3kg.jpg";
-import chickcrate from "../Pages/fwdkrishnatradersproducts/chickcrate.jpg";
-import nippledrinker from "../Pages/fwdkrishnatradersproducts/nippledrinker.jpg";
-import vaccinator from "../Pages/fwdkrishnatradersproducts/vaccinator.jpg";
 
 const PoultryEquipmentCompany = () => {
   const [activeTab, setActiveTab] = useState("infrastructure");
 
   // Define the product images array
   const productImages = [
-    { src: chickfeeder3kg, alt: "Chick Feeder 3kg" },
-    { src: chickcrate, alt: "Chick Crate" },
-    { src: nippledrinker, alt: "Nipple Drinker" },
-    { src: vaccinator, alt: "Vaccinator" }
+    { src: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", alt: "Chick Feeder 3kg" },
+    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkcQbcvGLcGwYW78BPGq6IMRV31gYd8ByxGg&s", alt: "Chick Crate" },
+    { src: "https://img.joomcdn.net/913531c16f783d75e644312580db9148e04c3402_original.jpeg", alt: "Nipple Drinker" },
+    { src: "https://5.imimg.com/data5/SELLER/Default/2023/7/322490575/II/VK/XF/26543303/poultry-vaccination-gun-500x500.jpg", alt: "Vaccinator" }
   ];
 
   const features = [

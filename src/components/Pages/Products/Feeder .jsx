@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Package } from "lucide-react";
 import Banner from "../../../Banner/Banner";
-import chickfedding from "../fwdkrishnatradersproducts/chickfeeder3kg.jpg";
-import growerfeeder8kg from "../fwdkrishnatradersproducts/growerfeeder8kg.jpg";
-import parentfeederfemale from "../fwdkrishnatradersproducts/parentfeederfemale.jpg";
+
 import standardfeeder10kg from "../fwdkrishnatradersproducts/standardfeeder10kg.jpg";
 
 const FeederShowcase = () => {
@@ -11,18 +9,18 @@ const FeederShowcase = () => {
   const breadcrumb = [{ name: "Home", link: "/", active: true }];
 
 
-  // Add image data at the top of your component
+
   const feederImages = [
     {
-      src: chickfedding, // Replace with your actual image paths
+      src: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", // Replace with your actual image paths
       alt: "Cage Feeder",
     },
     {
-      src: growerfeeder8kg,
+      src: "https://5.imimg.com/data5/SELLER/Default/2025/2/488124946/OW/AX/KG/7936473/grower-feeder-8kg.png",
       alt: "Chain Feeding System",
     },
     {
-      src: parentfeederfemale,
+      src: "https://5.imimg.com/data5/SELLER/Default/2024/10/458933800/QR/TQ/BL/227480048/jumbo-male-parent-feeder-500x500.jpg",
       alt: "Tube Feeder",
     },
     {

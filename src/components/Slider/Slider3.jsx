@@ -1,16 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
 // Product images
-import BasinChickDrinker from "../Pages/fwdkrishnatradersproductsmain/BasinChickDrinker2.5.jpg";
-import flamegun from "../Pages/fwdkrishnatradersproductsmain/flamegun4way.jpg";
-import jumboautomaticdrinkerclassic from "../Pages/fwdkrishnatradersproductsmain/jumboautomaticdrinkerclassic.jpg";
 import SprinklerSmall from "../Pages/fwdkrishnatradersproductsmain/SprinklerSmall.jpg";
-import chickfeeder3kg from "../Pages/fwdkrishnatradersproducts/chickfeeder3kg.jpg";
 import chickcrate from "../Pages/fwdkrishnatradersproducts/chickcrate.jpg";
-import nippledrinker from "../Pages/fwdkrishnatradersproducts/nippledrinker.jpg";
-import vaccinator from "../Pages/fwdkrishnatradersproducts/vaccinator.jpg";
-
 // Background images
 import slider1 from "../Slider/sloider1.png";
 import slider2 from "../Slider/slider2.png";
@@ -90,12 +82,12 @@ const ProductAutoSlider = () => {
           description: "Sanitation and disinfection tool"
         },
         { 
-          url: chickcrate, 
+          url: "https://5.imimg.com/data5/SELLER/Default/2021/2/CW/SF/LS/41984445/plastic-vegetable-crate-25-kg-500x500.jpg", 
           name: "TRANSPORT CRATE",
           description: "Durable poultry transport solution"
         },
         { 
-          url: SprinklerSmall, 
+          url: "https://m.media-amazon.com/images/I/51+UjV4dRvL._AC_UF1000,1000_QL80_.jpg", 
           name: "SPRINKLER",
           description: "Cooling and misting system"
         }

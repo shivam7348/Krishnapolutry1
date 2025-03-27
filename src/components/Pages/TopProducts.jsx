@@ -10,13 +10,13 @@ const TopProducts = () => {
       id: 1,
       name: "GROWER DRINKER (8 LTR)",
       category: "DRINKERS",
-      image: growerdrinker8ltr
+      image: "https://5.imimg.com/data5/SELLER/Default/2025/2/488123872/LE/KY/PM/7936473/grower-drinker-8-ltr.png"
     },
     {
       id: 2,
       name: "CHICK DRINKER (3 LTR)",
       category: "DRINKERS",
-      image: chickdrinker3ltr
+      image: "https://tiimg.tistatic.com/fp/1/009/100/chick-drinker-959.jpg"
     },
     {
       id: 3,

@@ -15,19 +15,19 @@ const DrinkerShowcase = () => {
   // Add image data at the top of your component
   const drinkerImages = [
     {
-      src: chickdrinker3ltr, // Replace with your actual image paths
+      src: "https://5.imimg.com/data5/YS/OB/MY-1086680/3-litre-chick-drinker-500x500.jpg", // Replace with your actual image paths
       alt: "Chick Drinker",
     },
     {
-      src: growerdrinker8ltr,
+      src: "https://5.imimg.com/data5/SELLER/Default/2025/2/488123872/LE/KY/PM/7936473/grower-drinker-8-ltr.png",
       alt: "Grower Drinker",
     },
     {
-      src: jumboautomaticdrinkerclassic,
+      src: "https://5.imimg.com/data5/SELLER/Default/2021/1/TM/WJ/MI/3288869/jumbo-drinker-set.jpg",
       alt: "Parent Drinker",
     },
     {
-      src: jumboautomaticdrinkerclassic,
+      src: "https://5.imimg.com/data5/SELLER/Default/2023/6/320536159/FH/IG/SW/191118674/250ml-jumbo-pvc-broiler-drinker.jpg",
       alt: "drinker"
     }
     

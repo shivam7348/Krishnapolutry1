@@ -15,11 +15,11 @@ const Home = () => {
   
  
       <AutoSlider/>
-      {/* <KrishnaPoultry/> */}
+      <KrishnaPoultry/>
 
-      {/* <TopProducts/> */}
+      <TopProducts/>
 
-      <ProductCard/>
+      {/* <ProductCard/> */}
       <SaiKrishnaIndustries/>
       <Testimonials/>
 
