@@ -19,7 +19,7 @@ const Home = () => {
 
       <TopProducts/>
 
-      {/* <ProductCard/> */}
+      <ProductCard/>
       <SaiKrishnaIndustries/>
       <Testimonials/>
 

@@ -16,7 +16,7 @@ const BroaderShowcase = () => {
   // Image data
   const broaderImages = [
     {
-      src: gasbrooder,
+      src: "https://5.imimg.com/data5/YB/OD/YE/SELLER-10608261/gas-brooder.jpg",
       alt: "Broader System 1",
     },
     {

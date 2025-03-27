@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import standardfeeder from "../Pages/fwdkrishnatradersproducts/standardfeeder10kg.jpg";
-import debeakingmachineautomatic from "../Pages/fwdkrishnatradersproducts/debeakingmachineautomatic.jpg";
 import gasbrooder from "../Pages/fwdkrishnatradersproducts/gasbrooder.jpg";
 import deberakingmachinemanual from "../Pages/fwdkrishnatradersproducts/deberakingmachinemanual.jpg";
-import chickcrate from "../Pages/fwdkrishnatradersproducts/chickcrate.jpg";
-import growerdrinker8ltr from "../Pages/fwdkrishnatradersproducts/growerdrinker8ltr.jpg";
-import chickfeeder3kg from "../Pages/fwdkrishnatradersproducts/chickfeeder3kg.jpg";
-import chickdrinker3ltr from "../Pages/fwdkrishnatradersproducts/chickdrinker3ltr.jpg";
-import nippledrinker from "../Pages/fwdkrishnatradersproducts/nippledrinker.jpg";
-import BasinChickDrinker from "../Pages/fwdkrishnatradersproductsmain/BasinChickDrinker2.5.jpg";
-import vaccinator from "../Pages/fwdkrishnatradersproducts/vaccinator.jpg";
-import sunheaterwith from "../Pages/fwdkrishnatradersproductsmain/sunheaterwith-timer.jpg";
+
+
+
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Card, CardContent, CardHeader } from "../ui/card";
+import { Card,  CardHeader } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 
 // Sample product data
@@ -59,25 +53,25 @@ const productData = {
   feeders: [
     {
       name: "Chick Feeder 3kg",
-      image: chickfeeder3kg,
+      image: "https://m.media-amazon.com/images/I/51ciDHPSB1L.jpg",
       description: "Efficient feeding solution for chicks",
       link: "chick-feeder",
     },
     {
       name: "Chick Drinker 3L",
-      image: chickdrinker3ltr,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROmPY9oJgCQgUwof7LiBQM5WTnocZ0CEDeej0DUvVbuZZPkCNfGt8-S1t00_g-GN7C4gw&usqp=CAU",
       description: "Easy-access drinking system for chicks",
       link: "chick-drinker",
     },
     {
       name: "Nipple Drinker",
-      image: nippledrinker,
+      image: "https://5.imimg.com/data5/IU/VV/MY-56724967/nipple-cup-500x500.jpg",
       description: "Hygienic nipple drinking system for poultry",
       link: "nipple-drinker",
     },
     {
       name: "Basin Chick Drinker",
-      image: BasinChickDrinker,
+      image: "https://5.imimg.com/data5/SELLER/Default/2021/3/WY/IA/EI/41512075/img-20210316-154959-500x500.jpg",
       description: "Sturdy basin-style drinker for chicks",
       link: "basin-drinker",
     },
@@ -85,13 +79,13 @@ const productData = {
   accessories: [
     {
       name: "Vaccinator",
-      image: vaccinator,
+      image: "https://5.imimg.com/data5/SELLER/Default/2023/7/328784861/UD/PN/WA/193142091/poultry-vaccinator-500x500.jpg",
       description: "Precision vaccination equipment for poultry",
       link: "poultry-vaccinator",
     },
     {
       name: "Sunheater",
-      image: sunheaterwith,
+      image: "https://m.media-amazon.com/images/I/616f-8I+NqL.jpg",
       description: "Energy-efficient heating solution",
       link: "sunheater",
     },
@@ -160,7 +154,7 @@ const CounterSection = () => {
 // Enhanced Image Carousel Component
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [gasbrooder, chickdrinker3ltr, deberakingmachinemanual];
+  const images = [gasbrooder, , deberakingmachinemanual, standardfeeder];
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>

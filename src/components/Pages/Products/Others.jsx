@@ -10,7 +10,7 @@ const OthersShowcase = () => {
   // Image data (example with a large number of images)
   const otherImages = [
     {
-      src: foggersinglke,
+      src: "https://5.imimg.com/data5/ANDROID/Default/2023/8/336588225/UW/UW/LO/21626414/product-jpeg-500x500.jpg",
       alt: "Fooger",
     },
     {
