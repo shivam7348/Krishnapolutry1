@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Factory, Users, Package } from "lucide-react";
+import flamegun4way from "../Pages/2products/flamegun4way.jpg"
+import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
+import foogersingle from "../Pages/2products/foogersingle.jpg"
+import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
 
 const PoultryEquipmentCompany = () => {
   const [activeTab, setActiveTab] = useState("infrastructure");
 
   // Define the product images array
   const productImages = [
-    { src: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", alt: "Chick Feeder 3kg" },
-    { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkcQbcvGLcGwYW78BPGq6IMRV31gYd8ByxGg&s", alt: "Chick Crate" },
-    { src: "https://img.joomcdn.net/913531c16f783d75e644312580db9148e04c3402_original.jpeg", alt: "Nipple Drinker" },
-    { src: "https://5.imimg.com/data5/SELLER/Default/2023/7/322490575/II/VK/XF/26543303/poultry-vaccination-gun-500x500.jpg", alt: "Vaccinator" }
+    { src: flamegun4way, alt: "Flame-Gun-4way" },
+    { src: jumboautomaticdrinker, alt: "Chick Crate" },
+    { src: foogersingle, alt: "Nipple Drinker" },
+    { src: sunheaterwithTimer, alt: "Vaccinator" }
   ];
 
   const features = [

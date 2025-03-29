@@ -1,8 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-// Product images
-import SprinklerSmall from "../Pages/fwdkrishnatradersproductsmain/SprinklerSmall.jpg";
-import chickcrate from "../Pages/fwdkrishnatradersproducts/chickcrate.jpg";
+import GrowerDrinker8Ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8Ltr.jpg"
+import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
+import IMG_8342 from "../Pages/mainkrishnaproducts/IMG_8342.jpg"
+import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
+import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
+
+
+
+
+
 // Background images
 import slider1 from "../Slider/sloider1.png";
 import slider2 from "../Slider/slider2.png";
@@ -16,23 +23,23 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Poultry Equipment Manufacturer & Supplier",
       products: [
         { 
-          url: "https://5.imimg.com/data5/SELLER/Default/2025/2/487080775/HY/BU/RP/121581144/poultry-grower-feeder-500x500.jpeg", 
+          url: GrowerDrinker8Ltr, 
           name: "GROWER DRINKER (8 LTR)",
           description: "High-capacity drinking solution for growing poultry"
         },
         { 
-          url: "https://s.alicdn.com/@sc04/kf/H47a0178cf0e9456db6c377e04836b7cep.jpg_720x720q50.jpg", 
+          url: GrowerFedder8kg, 
           name: "CHICK DRINKER (3 LTR)",
           description: "Perfect for young chicks with easy access"
         },
         { 
-          url: "https://5.imimg.com/data5/SELLER/Default/2020/11/XG/II/NK/29753767/poultry-turbo-feeder-500x500.jpg", 
+          url: IMG_8342, 
           name: "TURBO FEEDER",
           description: "Efficient feed distribution system"
         },
         { 
-          url: "https://5.imimg.com/data5/ANDROID/Default/2025/2/488443208/OF/VR/FO/42736512/product-jpeg-500x500.jpg", 
-          name: "ROUND FEEDER (10KG)",
+          url: vaccinator, 
+          name: "VACCINATOR",
           description: "Large capacity circular feeding solution"
         }
       ],
@@ -44,8 +51,8 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Quality Poultry Feeding Solutions",
       products: [
         { 
-          url: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", 
-          name: "CHICK FEEDER (3KG)",
+          url: standardfeeder10kg, 
+          name: "STANDARD FEEDER (10KG)",
           description: "Ideal starter feeder for young poultry"
         },
         { 
