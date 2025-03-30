@@ -333,7 +333,7 @@ const ProductAutoSlider = () => {
                             <img
                               src={product.url}
                               alt={product.name}
-                              className="max-h-[120px] md:max-h-[150px] w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                              className="max-h-[120px] md:max-h-[150px] w-auto object-fit transition-transform duration-500 group-hover:scale-105"
                               loading="lazy"
                             />
                           </div>
