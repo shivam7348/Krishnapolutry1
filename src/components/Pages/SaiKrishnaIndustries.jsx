@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Factory, Users, Package } from "lucide-react";
 import flamegun4way from "../Pages/2products/flamegun4way.jpg"
+
+import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
 import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
 import foogersingle from "../Pages/2products/foogersingle.jpg"
-import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
 
 const PoultryEquipmentCompany = () => {
   const [activeTab, setActiveTab] = useState("infrastructure");

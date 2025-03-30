@@ -15,9 +15,9 @@ const Home = () => {
   
  
       <AutoSlider/>
-      <KrishnaPoultry/>
 
       <TopProducts/>
+      <KrishnaPoultry/>
 
       {/* <ProductCard/> */}
       <SaiKrishnaIndustries/>

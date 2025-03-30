@@ -1,62 +1,146 @@
 import React from 'react';
+// feederImg
+import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
+import  parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
+import  standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
+import  parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
+// drinker Img
+import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
+import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
+import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
+import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
+// broader img 
+
+import broader from "../Pages/mainkrishnaproducts/broader.jpg"
+// others 
+
+import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
+import foogersingle from "../Pages/2products/foogersingle.jpg"
+import fog from "../Pages/2products/fog.jpg"
+import sprinkler from "../Pages/2products/sprinkler.jpg"
+
+
+import { motion } from 'framer-motion';
+import { Import } from 'lucide-react';
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
+// Product Card Component
+const ProductCard = ({ image, index }) => (
+  <motion.div 
+    variants={itemVariants}
+    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+  >
+    <div className="relative h-72 overflow-hidden">
+      <img 
+        src={image.src} 
+        alt={image.alt} 
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+        <span className="text-white font-medium">{image.description}</span>
+      </div>
+    </div>
+    <div className="p-5">
+      <h3 className="text-xl font-semibold text-gray-800 mb-2">{image.title}</h3>
+     
+    </div>
+  </motion.div>
+);
+
+// Section Header Component
+const SectionHeader = ({ title, description }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true, margin: "-100px" }}
+    className="mb-12"
+  >
+    <h2 className="text-4xl font-bold text-gray-900 mb-4 relative inline-block">
+      {title}
+      <span className="absolute bottom-0 left-0 w-1/3 h-1 bg-blue-500"></span>
+    </h2>
+    <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
+      {description}
+    </p>
+  </motion.div>
+);
 
 // Product Component Template
 const ProductSection = ({ title, description, images }) => {
   return (
-    <div className="py-12 px-6 md:px-12 bg-gray-50">
+    <section className="py-16 px-6 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">{title}</h2>
-        <p className="text-gray-600 mb-8 max-w-3xl">{description}</p>
+        <SectionHeader title={title} description={description} />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {images.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img 
-                src={image.src} 
-                alt={image.alt} 
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{image.title}</h3>
-                <p className="text-gray-600 mt-2">{image.description}</p>
-              </div>
-            </div>
+            <ProductCard key={index} image={image} index={index} />
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
 // Feeder Component
 export const Feeder = () => {
   const data = {
-    title: "Poultry Feeders",
-    description: "Our high-quality poultry feeders are designed to minimize waste and ensure easy access to feed for your birds. Made from durable materials, they come in various sizes to accommodate different flock sizes.",
+    title: " Poultry Feeders Equipments",
+    description: "Engineered for efficiency and durability, our poultry feeders minimize waste while ensuring optimal feed accessibility. Designed with precision to meet the needs of modern poultry operations at any scale.",
     images: [
       {
-        src: "https://example.com/feeder1.jpg",
+        src: cagebabyfeeder1by2kg,
         alt: "Automatic poultry feeder",
-        title: "Automatic Feeder",
-        description: "Automated feeding system for large flocks"
+        title: "Cage Baby Feeder 1/2 kg",
+        description: "Smart feeding technology for precision nutrition"
       },
       {
-        src: "https://example.com/feeder2.jpg",
+        src: parentfeedermale,
         alt: "Hanging poultry feeder",
-        title: "Hanging Feeder",
-        description: "Space-saving design for optimal feeding"
+        title: "Parent Feeder Male ",
+        description: "Optimized for high-density poultry housing"
       },
       {
-        src: "https://example.com/feeder3.jpg",
+        src: standardfeeder10kg,
         alt: "Trough poultry feeder",
-        title: "Trough Feeder",
-        description: "Durable construction for long-term use"
+        title: "Standard Feeder 10kg",
+        description: "Industrial-grade construction for longevity"
       },
       {
-        src: "https://example.com/feeder4.jpg",
+        src: parentfeederfemale,
         alt: "Chick feeder",
-        title: "Chick Feeder",
-        description: "Specially designed for young chicks"
+        title: "Parent Feeder Female ",
+        description: "Specialized design for optimal chick development"
       }
     ]
   };
@@ -67,32 +151,32 @@ export const Feeder = () => {
 // Drinker Component
 export const Drinker = () => {
   const data = {
-    title: "Poultry Drinkers",
-    description: "Our drinkers ensure clean and accessible water for your poultry at all times. Designed to prevent contamination and reduce water spillage, promoting healthier birds.",
+    title: "Advanced Poultry Drinkers",
+    description: "Our innovative drinking systems promote poultry health through clean, accessible water delivery. Engineered to reduce contamination and water waste while ensuring constant hydration.",
     images: [
       {
-        src: "https://example.com/drinker1.jpg",
+        src: babychickendrinker25ltr,
         alt: "Automatic poultry drinker",
-        title: "Automatic Drinker",
-        description: "Continuous water supply system"
+        title: "Baby Chicken Drinker 2.5ltr",
+        description: "Continuous water circulation technology"
       },
       {
-        src: "https://example.com/drinker2.jpg",
+        src: nippledrinker,
         alt: "Nipple drinker",
         title: "Nipple Drinker",
-        description: "Hygienic water delivery system"
+        description: "Patented anti-leak design"
       },
       {
-        src: "https://example.com/drinker3.jpg",
+        src: cagebabydrinker1by2Ltr,
         alt: "Bell drinker",
-        title: "Bell Drinker",
-        description: "Ideal for medium-sized flocks"
+        title: "Cage  Baby Drinker 1/2ltr",
+        description: "Self-cleaning water distribution"
       },
       {
-        src: "https://example.com/drinker4.jpg",
+        src: jumboautomaticdrinker,
         alt: "Chick drinker",
-        title: "Chick Drinker",
-        description: "Perfect for young chicks"
+        title: "Chick Drinker 3ltr",
+        description: "Gentle water delivery for young birds"
       }
     ]
   };
@@ -103,32 +187,32 @@ export const Drinker = () => {
 // Brooder & Debeaker Component
 export const BrooderDebeaker = () => {
   const data = {
-    title: "Brooders & Debeakers",
-    description: "Essential equipment for poultry health management. Our brooders provide optimal temperature for chicks, while our debeakers ensure humane beak trimming.",
+    title: "Brooder & Beak Management Solutions",
+    description: "Comprehensive solutions for poultry health management. Our precision-engineered brooders create optimal thermal environments, while our debeaking systems ensure humane, stress-free operations.",
     images: [
       {
-        src: "https://example.com/brooder1.jpg",
-        alt: "Infrared brooder",
-        title: "Infrared Brooder",
-        description: "Energy efficient heating for chicks"
-      },
-      {
-        src: "https://example.com/brooder2.jpg",
-        alt: "Gas brooder",
+        src: broader,
+        alt: " Gas Brooder",
         title: "Gas Brooder",
-        description: "Powerful heating for large areas"
+        description: "Energy-efficient radiant heat technology"
       },
       {
-        src: "https://example.com/debeaker1.jpg",
+        src: foogersingle,
+        alt: "Electric Brooder",
+        title: "GasPro Brooder System",
+        description: "High-capacity heating for large operations"
+      },
+      {
+        src: fog,
         alt: "Electric debeaker",
-        title: "Electric Debeaker",
-        description: "Precision beak trimming"
+        title: "PrecisionCut Debeaker",
+        description: "Temperature-controlled beak treatment"
       },
       {
-        src: "https://example.com/debeaker2.jpg",
+        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: "Manual debeaker",
-        title: "Manual Debeaker",
-        description: "Reliable and easy to use"
+        title: "QuickTrim Manual System",
+        description: "Ergonomic design for operator comfort"
       }
     ]
   };
@@ -139,32 +223,32 @@ export const BrooderDebeaker = () => {
 // Bird Tray Component
 export const BirdTray = () => {
   const data = {
-    title: "Bird Trays",
-    description: "Our bird trays are designed for efficient egg collection and bird handling. Made from durable materials for long-lasting performance.",
+    title: "Specialized Bird Handling Solutions",
+    description: "Engineered for efficiency in egg collection and bird management. Our trays feature durable, easy-to-clean materials designed to withstand rigorous farm use while protecting your birds.",
     images: [
       {
-        src: "https://example.com/tray1.jpg",
+        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: "Egg collection tray",
-        title: "Egg Collection Tray",
-        description: "Gentle on eggs, easy to clean"
+        title: "EggSafe Collection System",
+        description: "Anti-roll design with cushioning"
       },
       {
-        src: "https://example.com/tray2.jpg",
+        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: "Transport tray",
-        title: "Transport Tray",
-        description: "Secure bird transport solution"
+        title: "Ventura Transport Tray",
+        description: "Ventilated design for bird comfort"
       },
       {
-        src: "https://example.com/tray3.jpg",
+        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: "Sorting tray",
-        title: "Sorting Tray",
-        description: "Efficient bird sorting system"
+        title: "SmartSort Tray System",
+        description: "Modular design for efficient processing"
       },
       {
-        src: "https://example.com/tray4.jpg",
+        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         alt: "Multi-purpose tray",
-        title: "Multi-purpose Tray",
-        description: "Versatile design for various uses"
+        title: "MultiFlex Utility Tray",
+        description: "Adaptable design for multiple applications"
       }
     ]
   };
@@ -175,32 +259,21 @@ export const BirdTray = () => {
 // Others Component
 export const Others = () => {
   const data = {
-    title: "Other Poultry Equipment",
-    description: "Complete your poultry farm setup with our range of additional equipment designed to make poultry farming more efficient and productive.",
+    title: "Complete Poultry Equipment Solutions",
+    description: "Our comprehensive range of poultry equipment is designed to optimize every aspect of your operation, from housing to environmental control and maintenance.",
     images: [
       {
-        src: "https://example.com/other1.jpg",
-        alt: "Nest boxes",
-        title: "Nest Boxes",
-        description: "Comfortable laying environment"
+        src: vaccinator,
+        alt: "vaccinator",
+        title: "Vaccinator",
+        description: "Ergonomic design for egg production"
       },
+     
       {
-        src: "https://example.com/other2.jpg",
-        alt: "Ventilation system",
-        title: "Ventilation Systems",
-        description: "Optimal air circulation"
-      },
-      {
-        src: "https://example.com/other3.jpg",
-        alt: "Cages",
-        title: "Poultry Cages",
-        description: "Durable housing solutions"
-      },
-      {
-        src: "https://example.com/other4.jpg",
-        alt: "Cleaning equipment",
-        title: "Cleaning Equipment",
-        description: "Maintain hygiene standards"
+        src: sprinkler,
+        alt: "sprinkler",
+        title: "Sprinkler",
+        description: "Hygiene maintenance systems"
       }
     ]
   };
@@ -211,7 +284,7 @@ export const Others = () => {
 // Main Component with all products
 const Products = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans antialiased text-gray-900">
       <Feeder />
       <Drinker />
       <BrooderDebeaker />
