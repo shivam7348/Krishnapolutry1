@@ -64,7 +64,7 @@ const ProductAutoSlider = () => {
       products: [
         { 
           url: babychickendrinker25ltr, 
-          name: "STANDARD FEEDER (10KG)",
+          name: "Baby Chicken Drinker2.5 ltr",
           description: "Ideal starter feeder for young poultry"
         },
         { 
@@ -74,12 +74,12 @@ const ProductAutoSlider = () => {
         },
         { 
           url: cagebabydrinker1by2Ltr, 
-          name: "AUTOMATIC DRINKER",
+          name: "Cage Baby Drinker1by2Ltr",
           description: "Self-regulating water supply"
         },
         { 
           url: jumboautomaticdrinker, 
-          name: "CHICK CRATE",
+          name: "Jumbo Automatic Drinker",
           description: "Safe transport and handling"
         }
       ],
@@ -97,17 +97,17 @@ const ProductAutoSlider = () => {
         },
         { 
           url: foogersingle, 
-          name: "FLAME GUN",
+          name: "Fooger Single",
           description: "Sanitation and disinfection tool"
         },
         { 
           url: debeakermachinemanual, 
-          name: "TRANSPORT CRATE",
+          name: "Debeaker Machine Manual",
           description: "Durable poultry transport solution"
         },
         { 
           url: debeakingmachineautimatic, 
-          name: "SPRINKLER",
+          name: "Debeaking Machine Autimatic",
           description: "Cooling and misting system"
         }
       ],
@@ -340,12 +340,10 @@ const ProductAutoSlider = () => {
                           
                           {/* Product Info */}
                           <div className="text-center">
-                            <h3 className="text-sm md:text-base font-bold text-gray-800 mb-1">
+                            <h3 className="text-sm md:text-base font-bold text-gray-600 mb-1">
                               {product.name}
                             </h3>
-                            <p className="text-xs text-gray-600 mb-2 line-clamp-2">
-                              {product.description}
-                            </p>
+                           
                            
                           </div>
                         </div>
