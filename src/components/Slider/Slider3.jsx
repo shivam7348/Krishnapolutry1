@@ -1,14 +1,26 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import GrowerDrinker8Ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8Ltr.jpg"
-import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
-import IMG_8342 from "../Pages/mainkrishnaproducts/IMG_8342.jpg"
+
+//feeder
+import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
+import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
+import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
+import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
+
+// drinker
+import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
+import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
+import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
+import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
+
+// others 
 import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
-import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
-
-
-
-
+import foogersingle from "../Pages/2products/foogersingle.jpg"
+import sprinkler from "../Pages/2products/sprinkler.jpg"
+import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
+import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
+import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
+import flamegun4way from "../Pages/2products/flamegun4way.jpg"
 
 // Background images
 import slider1 from "../Slider/sloider1.png";
@@ -23,22 +35,22 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Poultry Equipment Manufacturer & Supplier",
       products: [
         { 
-          url: GrowerDrinker8Ltr, 
+          url: cagebabyfeeder1by2kg, 
           name: "GROWER DRINKER (8 LTR)",
           description: "High-capacity drinking solution for growing poultry"
         },
         { 
-          url: GrowerFedder8kg, 
+          url: parentfeedermale, 
           name: "CHICK DRINKER (3 LTR)",
           description: "Perfect for young chicks with easy access"
         },
         { 
-          url: IMG_8342, 
+          url: parentfeederfemale, 
           name: "TURBO FEEDER",
           description: "Efficient feed distribution system"
         },
         { 
-          url: vaccinator, 
+          url: chickFeedingTray, 
           name: "VACCINATOR",
           description: "Large capacity circular feeding solution"
         }
@@ -51,22 +63,22 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Quality Poultry Feeding Solutions",
       products: [
         { 
-          url: standardfeeder10kg, 
+          url: babychickendrinker25ltr, 
           name: "STANDARD FEEDER (10KG)",
           description: "Ideal starter feeder for young poultry"
         },
         { 
-          url: "https://img.agriexpo.online/images_ag/photo-mg/184647-12761593.jpg", 
+          url: nippledrinker, 
           name: "NIPPLE DRINKER",
           description: "Hygienic water delivery system"
         },
         { 
-          url: "https://5.imimg.com/data5/SELLER/Default/2022/4/RF/FN/PD/105972358/plastic-deluxe-auto-poultry-drinker.png", 
+          url: cagebabydrinker1by2Ltr, 
           name: "AUTOMATIC DRINKER",
           description: "Self-regulating water supply"
         },
         { 
-          url: "https://www.totalplast.in/images/chick-box.jpg", 
+          url: jumboautomaticdrinker, 
           name: "CHICK CRATE",
           description: "Safe transport and handling"
         }
@@ -79,22 +91,22 @@ const ProductAutoSlider = () => {
       subtitle: "Specialized Poultry Management Tools",
       products: [
         { 
-          url: "https://5.imimg.com/data5/SELLER/Default/2023/7/322490575/II/VK/XF/26543303/poultry-vaccination-gun-500x500.jpg", 
+          url: vaccinator, 
           name: "VACCINATOR",
           description: "Precision vaccination equipment"
         },
         { 
-          url: "https://5.imimg.com/data5/ANDROID/Default/2023/6/318247247/XY/HN/EY/42736512/product-jpeg.jpg", 
+          url: foogersingle, 
           name: "FLAME GUN",
           description: "Sanitation and disinfection tool"
         },
         { 
-          url: "https://5.imimg.com/data5/SELLER/Default/2021/2/CW/SF/LS/41984445/plastic-vegetable-crate-25-kg-500x500.jpg", 
+          url: debeakermachinemanual, 
           name: "TRANSPORT CRATE",
           description: "Durable poultry transport solution"
         },
         { 
-          url: "https://m.media-amazon.com/images/I/51+UjV4dRvL._AC_UF1000,1000_QL80_.jpg", 
+          url: debeakingmachineautimatic, 
           name: "SPRINKLER",
           description: "Cooling and misting system"
         }

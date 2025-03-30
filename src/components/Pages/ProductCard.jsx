@@ -1,7 +1,32 @@
 import React, { useState } from "react";
-import standardfeeder from "../Pages/fwdkrishnatradersproducts/standardfeeder10kg.jpg";
-import gasbrooder from "../Pages/fwdkrishnatradersproducts/gasbrooder.jpg";
-import deberakingmachinemanual from "../Pages/fwdkrishnatradersproducts/deberakingmachinemanual.jpg";
+import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
+import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
+import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
+import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
+import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
+import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
+
+// drinker Img
+import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
+import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
+import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
+import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
+import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.jpg"
+import belldrinkercls from "../Pages/mainkrishnaproducts/belldrinkercls.jpg"
+
+// broader img 
+import broader from "../Pages/mainkrishnaproducts/broader.jpg"
+// others 
+import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
+import foogersingle from "../Pages/2products/foogersingle.jpg"
+import sprinkler from "../Pages/2products/sprinkler.jpg"
+import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
+import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
+import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
+import flamegun4way from "../Pages/2products/flamegun4way.jpg"
+import chicktransporationbox from "../Pages/mainkrishnaproducts/chicktransporationbox.jpg"
+import eggtray from "../Pages/mainkrishnaproducts/eggtray.jpg"
+import BirdTransporation from "../Pages/mainkrishnaproducts/BirdTransporation.jpg"
 
 
 
@@ -15,19 +40,14 @@ const productData = {
   equipment: [
     {
       name: "Parent Stock Feeder",
-      image: standardfeeder,
+      image: standardfeeder10kg,
       description: "Advanced feeder for parent stock management",
       link: "parent-stock-feeder",
     },
-    {
-      name: "Automatic Debeaking Machine",
-      image: "https://cpimg.tistatic.com/03952771/b/7/DEBEAKER-MACHINE-AUTOMATIC.jpg",
-      description: "Precision debeaking with automated control",
-      link: "automatic-debeaker",
-    },
+   
     {
       name: "Gas Brooder",
-      image: "https://5.imimg.com/data5/SELLER/Default/2024/6/425046285/CO/VM/OR/83843017/gas-brooders-for-poultry-500x500.webp",
+      image: broader,
       description: "Temperature-controlled brooding solution",
       link: "gas-brooder",
     },
@@ -154,7 +174,9 @@ const CounterSection = () => {
 // Enhanced Image Carousel Component
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [gasbrooder, , deberakingmachinemanual, standardfeeder];
+  const images = [broader,    debeakingmachineautimatic, cagebabyfeeder1by2kg,parentfeederfemale,standardfeeder10kg,parentfeedermale,
+    cagebabydrinker1by2Ltr,jumboautomaticdrinker,nippledrinker,babychickendrinker25ltr
+  ];
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>

@@ -5,6 +5,7 @@ import cagebabyfeeder1by2kg from "../mainkrishnaproducts/cagebabyfeeder1by2kg.jp
 import parentfeedermale from "../mainkrishnaproducts/parentfeedermale.jpg"
 import standardfeeder10kg from "../fwdkrishnatradersproducts/standardfeeder10kg.jpg";
 import parentfeederfemale from "../mainkrishnaproducts/parentfeederfemale.jpg"
+import cheekfeeder3kg from "../mainkrishnaproducts/cheekfeeder3kg.jpg"
 
 const FeederShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -29,6 +30,15 @@ const FeederShowcase = () => {
       src: standardfeeder10kg,
       alt: "Standard Feeder 10kg",
     },
+    {
+      src: cheekfeeder3kg,
+      alt: "Standard Feeder 10kg",
+    },
+    {
+      src: cheekfeeder3kg,
+      alt: "Standard Feeder 10kg",
+
+    }
   ];
 
   const features = [

@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 // feederImg
 import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
-import  parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
-import  standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
-import  parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
+import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
+import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
+import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
+import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
+import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
+
 // drinker Img
 import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
 import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
 import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
 import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
-// broader img 
+import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.jpg"
+import belldrinkercls from "../Pages/mainkrishnaproducts/belldrinkercls.jpg"
 
+
+// broader img 
 import broader from "../Pages/mainkrishnaproducts/broader.jpg"
 // others 
-
 import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
 import foogersingle from "../Pages/2products/foogersingle.jpg"
-import fog from "../Pages/2products/fog.jpg"
 import sprinkler from "../Pages/2products/sprinkler.jpg"
+import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
+import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
+import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
+import flamegun4way from "../Pages/2products/flamegun4way.jpg"
+import chicktransporationbox from "../Pages/mainkrishnaproducts/chicktransporationbox.jpg"
+import eggtray from "../Pages/mainkrishnaproducts/eggtray.jpg"
+import BirdTransporation from "../Pages/mainkrishnaproducts/BirdTransporation.jpg"
+
+
 
 
 import { motion } from 'framer-motion';
-import { Import } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Animation variants
 const containerVariants = {
@@ -65,7 +78,6 @@ const ProductCard = ({ image, index }) => (
     </div>
     <div className="p-5">
       <h3 className="text-xl font-semibold text-gray-800 mb-2">{image.title}</h3>
-     
     </div>
   </motion.div>
 );
@@ -89,59 +101,153 @@ const SectionHeader = ({ title, description }) => (
   </motion.div>
 );
 
-// Product Component Template
+// Product Component Template with Pagination
+// Updated ProductSection component with fixed animation on pagination
 const ProductSection = ({ title, description, images }) => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0); // Add this line
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(images.length / itemsPerPage);
+  
+  const currentImages = images.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => {
+      const newPage = (prev + 1) % totalPages;
+      setAnimationKey(prevKey => prevKey + 1); // Reset animation key
+      return newPage;
+    });
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => {
+      const newPage = (prev - 1 + totalPages) % totalPages;
+      setAnimationKey(prevKey => prevKey + 1); // Reset animation key
+      return newPage;
+    });
+  };
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+    setAnimationKey(prevKey => prevKey + 1); // Reset animation key
+  };
+
   return (
     <section className="py-16 px-6 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
         <SectionHeader title={title} description={description} />
         
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {images.map((image, index) => (
-            <ProductCard key={index} image={image} index={index} />
-          ))}
-        </motion.div>
+        <div className="relative">
+          {images.length > itemsPerPage && (
+            <>
+              <button
+                onClick={prevPage}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+                aria-label="Previous products"
+              >
+                <ChevronLeft className="w-6 h-6 text-gray-700" />
+              </button>
+              <button
+                onClick={nextPage}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+                aria-label="Next products"
+              >
+                <ChevronRight className="w-6 h-6 text-gray-700" />
+              </button>
+            </>
+          )}
+          
+          {/* Add key prop to force re-render and re-animate */}
+          <motion.div
+            key={animationKey} // This ensures animations replay on page change
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {currentImages.map((image, index) => (
+              <ProductCard key={`${image.title}-${index}-${currentPage}`} image={image} index={index} />
+            ))}
+          </motion.div>
+          
+          {images.length > itemsPerPage && (
+            <div className="flex justify-center mt-6 space-x-2">
+              {Array.from({ length: totalPages }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToPage(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentPage ? 'bg-blue-500' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to page ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
 };
-
 // Feeder Component
 export const Feeder = () => {
   const data = {
-    title: " Poultry Feeders Equipments",
+    title: "Poultry Feeders Equipments",
     description: "Engineered for efficiency and durability, our poultry feeders minimize waste while ensuring optimal feed accessibility. Designed with precision to meet the needs of modern poultry operations at any scale.",
     images: [
       {
         src: cagebabyfeeder1by2kg,
-        alt: "Automatic poultry feeder",
+        alt: "Cage Baby Feeder",
         title: "Cage Baby Feeder 1/2 kg",
         description: "Smart feeding technology for precision nutrition"
       },
       {
         src: parentfeedermale,
-        alt: "Hanging poultry feeder",
-        title: "Parent Feeder Male ",
+        alt: "Parent Feeder Male",
+        title: "Parent Feeder Male",
         description: "Optimized for high-density poultry housing"
       },
       {
         src: standardfeeder10kg,
-        alt: "Trough poultry feeder",
+        alt: "Standard Feeder",
         title: "Standard Feeder 10kg",
         description: "Industrial-grade construction for longevity"
       },
       {
         src: parentfeederfemale,
-        alt: "Chick feeder",
-        title: "Parent Feeder Female ",
+        alt: "Parent Feeder Female",
+        title: "Parent Feeder Female",
         description: "Specialized design for optimal chick development"
-      }
+      },
+      {
+        src: chickFeedingTray,
+        alt: "Parent Feeder Female",
+        title: "Chick Feeding Tray",
+        description: "Specialized design for optimal chick development"
+      },
+      {
+        src: GrowerFedder8kg,
+        alt: "Parent Feeder Female",
+        title: "Parent Feeder Female",
+        description: "Specialized design for optimal chick development"
+      },
+      {
+        src: parentfeederfemale,
+        alt: "Parent Feeder Female",
+        title: "Parent Feeder Female",
+        description: "Specialized design for optimal chick development"
+      },
+      {
+        src: parentfeederfemale,
+        alt: "Parent Feeder Female",
+        title: "Parent Feeder Female",
+        description: "Specialized design for optimal chick development"
+      },
+    
     ]
   };
 
@@ -156,28 +262,50 @@ export const Drinker = () => {
     images: [
       {
         src: babychickendrinker25ltr,
-        alt: "Automatic poultry drinker",
+        alt: "Baby Chicken Drinker",
         title: "Baby Chicken Drinker 2.5ltr",
         description: "Continuous water circulation technology"
       },
       {
         src: nippledrinker,
-        alt: "Nipple drinker",
+        alt: "Nipple Drinker",
         title: "Nipple Drinker",
         description: "Patented anti-leak design"
       },
       {
         src: cagebabydrinker1by2Ltr,
-        alt: "Bell drinker",
-        title: "Cage  Baby Drinker 1/2ltr",
+        alt: "Cage Baby Drinker",
+        title: "Cage Baby Drinker 1/2ltr",
         description: "Self-cleaning water distribution"
       },
       {
         src: jumboautomaticdrinker,
-        alt: "Chick drinker",
-        title: "Chick Drinker 3ltr",
+        alt: "Jumbo Automatic Drinker",
+        title: "Jumbo Automatic Drinker",
         description: "Gentle water delivery for young birds"
+      },
+      {
+        src: babychickendrinker25ltr,
+        alt: "Baby Chicken Drinker Pro",
+        title: "Baby Chicken Drinker Pro",
+        description: "Upgraded version with larger capacity"
+      },
+      {
+        src: ChickDrinker3ltr,
+        alt: "Baby Chicken Drinker Pro",
+        title: " Chicken Drinker 3ltr",
+        description: "Upgraded version with larger capacity"
+
+      },
+     
+      {
+        src: belldrinkercls,
+        alt: "Baby Chicken Drinker Pro",
+        title: " Chicken Drinker 3ltr",
+        description: "Upgraded version with larger capacity"
+
       }
+      
     ]
   };
 
@@ -187,68 +315,38 @@ export const Drinker = () => {
 // Brooder & Debeaker Component
 export const BrooderDebeaker = () => {
   const data = {
-    title: "Brooder & Beak Management Solutions",
+    title: "Brooder & Debeaker",
     description: "Comprehensive solutions for poultry health management. Our precision-engineered brooders create optimal thermal environments, while our debeaking systems ensure humane, stress-free operations.",
     images: [
       {
         src: broader,
-        alt: " Gas Brooder",
+        alt: "Gas Brooder",
         title: "Gas Brooder",
         description: "Energy-efficient radiant heat technology"
       },
       {
         src: foogersingle,
-        alt: "Electric Brooder",
-        title: "GasPro Brooder System",
+        alt: "Fogger Single",
+        title: "Fogger Single",
         description: "High-capacity heating for large operations"
       },
       {
-        src: fog,
-        alt: "Electric debeaker",
-        title: "PrecisionCut Debeaker",
+        src: debeakingmachineautimatic,
+        alt: "Automatic Debeaking Machine",
+        title: "Debeaking Machine Automatic",
         description: "Temperature-controlled beak treatment"
       },
       {
-        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        alt: "Manual debeaker",
-        title: "QuickTrim Manual System",
+        src: debeakermachinemanual,
+        alt: "Manual Debeaking Machine",
+        title: "Debeaker Machine Manual",
         description: "Ergonomic design for operator comfort"
-      }
-    ]
-  };
-
-  return <ProductSection {...data} />;
-};
-
-// Bird Tray Component
-export const BirdTray = () => {
-  const data = {
-    title: "Specialized Bird Handling Solutions",
-    description: "Engineered for efficiency in egg collection and bird management. Our trays feature durable, easy-to-clean materials designed to withstand rigorous farm use while protecting your birds.",
-    images: [
-      {
-        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        alt: "Egg collection tray",
-        title: "EggSafe Collection System",
-        description: "Anti-roll design with cushioning"
       },
       {
-        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        alt: "Transport tray",
-        title: "Ventura Transport Tray",
-        description: "Ventilated design for bird comfort"
-      },
-      {
-        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        alt: "Sorting tray",
-        title: "SmartSort Tray System",
-        description: "Modular design for efficient processing"
-      },
-      {
-        src: "https://images.unsplash.com/photo-1556910637-9a8c0a6e1b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        alt: "Multi-purpose tray",
-        title: "MultiFlex Utility Tray",
-        description: "Adaptable design for multiple applications"
+        src: broader,
+        alt: "Gas Brooder Pro",
+        title: "Gas Brooder Pro",
+        description: "Professional grade with temperature control"
       }
     ]
   };
@@ -264,16 +362,54 @@ export const Others = () => {
     images: [
       {
         src: vaccinator,
-        alt: "vaccinator",
+        alt: "Vaccinator",
         title: "Vaccinator",
-        description: "Ergonomic design for egg production"
+        description: "Precision vaccination equipment"
       },
-     
       {
         src: sprinkler,
-        alt: "sprinkler",
+        alt: "Sprinkler",
         title: "Sprinkler",
         description: "Hygiene maintenance systems"
+      },
+      {
+        src: sunheaterwithTimer,
+        alt: "Sun Heater with Timer",
+        title: "Sun Heater With Timer",
+        description: "Automated temperature control"
+      },
+      {
+        src: chicktransporationbox,
+        alt: "Chick Transportation Box",
+        title: "Chick Transportation Box",
+        description: "Safe transport for young birds"
+      },
+      {
+        src: flamegun4way,
+        alt: "Vaccinator Pro",
+        title: "Flame Gun 4 Way",
+        description: "Advanced vaccination system"
+      },
+      {
+        src: sprinkler,
+        alt: "Sprinkler System",
+        title: "Sprinkler System",
+        description: "Complete farm hygiene solution"
+      },
+      {
+        src: eggtray,
+        alt: "Sprinkler System",
+        title: "Egg Tray",
+        description: "Complete farm hygiene solution"
+
+      },
+      {
+        src: BirdTransporation,
+        alt: "Sprinkler System",
+        title: "Bird Transporation",
+        description: "Complete farm hygiene solution"
+
+
       }
     ]
   };
@@ -288,7 +424,6 @@ const Products = () => {
       <Feeder />
       <Drinker />
       <BrooderDebeaker />
-      <BirdTray />
       <Others />
     </div>
   );
