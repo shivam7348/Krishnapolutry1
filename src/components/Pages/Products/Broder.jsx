@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Box } from "lucide-react";
 
-// import broader1 from "../fwdkrishnatradersproducts/broader1.jpg";
-// import broader2 from "../fwdkrishnatradersproducts/broader2.jpg";
-// import broader3 from "../fwdkrishnatradersproducts/broader3.jpg";
-// import broader4 from "../fwdkrishnatradersproducts/broader4.jpg";
 import gasbrooder from "../fwdkrishnatradersproducts/gasbrooder.jpg"
 
 import Banner from "@/Banner/Banner";

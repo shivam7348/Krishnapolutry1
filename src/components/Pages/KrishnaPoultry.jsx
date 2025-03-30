@@ -1,108 +1,224 @@
 import React from 'react';
 
-const VinayakPoultry = () => {
+// Product Component Template
+const ProductSection = ({ title, description, images }) => {
   return (
-    <div className="font-sans max-w-7xl mx-auto">
-      {/* Hero Section */}
-      <div className="flex flex-col md:flex-row bg-gray-50   ">
-        <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col   justify-center border-l-4 border-red-700">
-          <div className="text-red-700 font-semibold mb-2">FOUNDED IN 2013</div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800  mb-4">Krishna Poultry Equipments & Trader</h1>
-          <p className="text-gray-600 mb-6">
-           Krishna Poultry has grown to become one of India’s most trusted manufacturers, exporters, and suppliers of premium poultry products and equipment. Renowned for our durable, high-quality solutions, we are committed to enhancing poultry farming with cutting-edge technology and innovation. Our state-of-the-art manufacturing facility ensures precision and excellence in every product we deliver. At Krishna Poultry, continuous improvement is our priority, allowing us to provide the best solutions for poultry owners while staying ahead in the industry.
-          </p>
-          <div>
-         
-          </div>
-        </div>
-        <div className="w-full md:w-1/2">
-          <img 
-            src="https://www.shutterstock.com/image-photo/agriculture-sustainability-food-chicken-on-600nw-2227464335.jpg" 
-            alt="Poultry farming equipment with chickens" 
-            className="w-full h-full object-cover"
-          />
+    <div className="py-12 px-6 md:px-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">{title}</h2>
+        <p className="text-gray-600 mb-8 max-w-3xl">{description}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {images.map((image, index) => (
+            <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img 
+                src={image.src} 
+                alt={image.alt} 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-800">{image.title}</h3>
+                <p className="text-gray-600 mt-2">{image.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
-      {/* Features Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-12 px-6 md:px-12">
-        {/* Feature 1 */}
-        <div className="text-center md:text-left">
-          <div className="flex justify-center md:justify-start">
-            <div className="text-6xl text-gray-100 font-bold">01</div>
-            <div className="text-red-700 ml-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/>
-                <circle cx="9" cy="13" r="1"/>
-                <polyline points="12 10 16 14"/>
-              </svg>
-            </div>
-          </div>
-          <h2 className="text-xl font-bold text-gray-800 mt-2 mb-3">What we provide</h2>
-          <p className="text-gray-600">
-          Our state-of-the-art manufacturing facility ensures precision, reliability, and excellence in every product we deliver. With a wide range of attractive and distinctive features.
-          </p>
-        </div>
-
-        {/* Feature 2 */}
-        <div className="text-center md:text-left">
-          <div className="flex justify-center md:justify-start">
-            <div className="text-6xl text-gray-100 font-bold">02</div>
-            <div className="text-red-700 ml-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="9" r="5"/>
-                <path d="M14.6 15a9 9 0 0 1 10.4 0"/>
-                <path d="M19 14l3 3 3-3"/>
-              </svg>
-            </div>
-          </div>
-          <h2 className="text-xl font-bold text-gray-800 mt-2 mb-3">Affordable Products</h2>
-          <p className="text-gray-600">
-          We guarantee our customers receive dependable poultry products that meet the highest standards in the market. Our customized solutions are designed to cater to specific customer needs, all at competitive prices.
-          </p>
-        </div>
-
-        {/* Feature 3 */}
-        <div className="text-center md:text-left">
-          <div className="flex justify-center md:justify-start">
-            <div className="text-6xl text-gray-100 font-bold">03</div>
-            <div className="text-red-700 ml-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="10" cy="20" r="2"/>
-                <path d="M10 20h6"/>
-                <circle cx="18" cy="20" r="2"/>
-                <path d="M5.67 6H23l-3.68 11.04A2 2 0 0 1 17.38 19H9.75a2 2 0 0 1-1.93-1.5L5.23 4.74A2 2 0 0 0 3.3 3H1"/>
-              </svg>
-            </div>
-          </div>
-          <h2 className="text-xl font-bold text-gray-800 mt-2 mb-3">Our Products Features</h2>
-          <p className="text-gray-600">
-          Our products stand out with the highest quality, world-class standards, and precision, offering exceptional value for money. Designed to save time, money, and labor, they contribute to long-term profitability and efficiency.
-          </p>
-        </div>
-
-        {/* Feature 4 */}
-        <div className="text-center md:text-left">
-          <div className="flex justify-center md:justify-start">
-            <div className="text-6xl text-gray-100 font-bold">04</div>
-            <div className="text-red-700 ml-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/>
-              </svg>
-            </div>
-          </div>
-          <h2 className="text-xl font-bold text-gray-800 mt-2 mb-3">Our Promise</h2>
-          <p className="text-gray-600">
-            Honesty, integrity, and transparency are crucial parts of a successful and stable business.
-            Hence, we promise that "We will do business in a manner that would be fair, honest, open, and ethical".
-          </p>
-        </div>
-      </div>
-
-      {/* Footer Separator */}
-      <div className="border-t border-gray-200"></div>
     </div>
   );
 };
 
-export default VinayakPoultry;
+// Feeder Component
+export const Feeder = () => {
+  const data = {
+    title: "Poultry Feeders",
+    description: "Our high-quality poultry feeders are designed to minimize waste and ensure easy access to feed for your birds. Made from durable materials, they come in various sizes to accommodate different flock sizes.",
+    images: [
+      {
+        src: "https://example.com/feeder1.jpg",
+        alt: "Automatic poultry feeder",
+        title: "Automatic Feeder",
+        description: "Automated feeding system for large flocks"
+      },
+      {
+        src: "https://example.com/feeder2.jpg",
+        alt: "Hanging poultry feeder",
+        title: "Hanging Feeder",
+        description: "Space-saving design for optimal feeding"
+      },
+      {
+        src: "https://example.com/feeder3.jpg",
+        alt: "Trough poultry feeder",
+        title: "Trough Feeder",
+        description: "Durable construction for long-term use"
+      },
+      {
+        src: "https://example.com/feeder4.jpg",
+        alt: "Chick feeder",
+        title: "Chick Feeder",
+        description: "Specially designed for young chicks"
+      }
+    ]
+  };
+
+  return <ProductSection {...data} />;
+};
+
+// Drinker Component
+export const Drinker = () => {
+  const data = {
+    title: "Poultry Drinkers",
+    description: "Our drinkers ensure clean and accessible water for your poultry at all times. Designed to prevent contamination and reduce water spillage, promoting healthier birds.",
+    images: [
+      {
+        src: "https://example.com/drinker1.jpg",
+        alt: "Automatic poultry drinker",
+        title: "Automatic Drinker",
+        description: "Continuous water supply system"
+      },
+      {
+        src: "https://example.com/drinker2.jpg",
+        alt: "Nipple drinker",
+        title: "Nipple Drinker",
+        description: "Hygienic water delivery system"
+      },
+      {
+        src: "https://example.com/drinker3.jpg",
+        alt: "Bell drinker",
+        title: "Bell Drinker",
+        description: "Ideal for medium-sized flocks"
+      },
+      {
+        src: "https://example.com/drinker4.jpg",
+        alt: "Chick drinker",
+        title: "Chick Drinker",
+        description: "Perfect for young chicks"
+      }
+    ]
+  };
+
+  return <ProductSection {...data} />;
+};
+
+// Brooder & Debeaker Component
+export const BrooderDebeaker = () => {
+  const data = {
+    title: "Brooders & Debeakers",
+    description: "Essential equipment for poultry health management. Our brooders provide optimal temperature for chicks, while our debeakers ensure humane beak trimming.",
+    images: [
+      {
+        src: "https://example.com/brooder1.jpg",
+        alt: "Infrared brooder",
+        title: "Infrared Brooder",
+        description: "Energy efficient heating for chicks"
+      },
+      {
+        src: "https://example.com/brooder2.jpg",
+        alt: "Gas brooder",
+        title: "Gas Brooder",
+        description: "Powerful heating for large areas"
+      },
+      {
+        src: "https://example.com/debeaker1.jpg",
+        alt: "Electric debeaker",
+        title: "Electric Debeaker",
+        description: "Precision beak trimming"
+      },
+      {
+        src: "https://example.com/debeaker2.jpg",
+        alt: "Manual debeaker",
+        title: "Manual Debeaker",
+        description: "Reliable and easy to use"
+      }
+    ]
+  };
+
+  return <ProductSection {...data} />;
+};
+
+// Bird Tray Component
+export const BirdTray = () => {
+  const data = {
+    title: "Bird Trays",
+    description: "Our bird trays are designed for efficient egg collection and bird handling. Made from durable materials for long-lasting performance.",
+    images: [
+      {
+        src: "https://example.com/tray1.jpg",
+        alt: "Egg collection tray",
+        title: "Egg Collection Tray",
+        description: "Gentle on eggs, easy to clean"
+      },
+      {
+        src: "https://example.com/tray2.jpg",
+        alt: "Transport tray",
+        title: "Transport Tray",
+        description: "Secure bird transport solution"
+      },
+      {
+        src: "https://example.com/tray3.jpg",
+        alt: "Sorting tray",
+        title: "Sorting Tray",
+        description: "Efficient bird sorting system"
+      },
+      {
+        src: "https://example.com/tray4.jpg",
+        alt: "Multi-purpose tray",
+        title: "Multi-purpose Tray",
+        description: "Versatile design for various uses"
+      }
+    ]
+  };
+
+  return <ProductSection {...data} />;
+};
+
+// Others Component
+export const Others = () => {
+  const data = {
+    title: "Other Poultry Equipment",
+    description: "Complete your poultry farm setup with our range of additional equipment designed to make poultry farming more efficient and productive.",
+    images: [
+      {
+        src: "https://example.com/other1.jpg",
+        alt: "Nest boxes",
+        title: "Nest Boxes",
+        description: "Comfortable laying environment"
+      },
+      {
+        src: "https://example.com/other2.jpg",
+        alt: "Ventilation system",
+        title: "Ventilation Systems",
+        description: "Optimal air circulation"
+      },
+      {
+        src: "https://example.com/other3.jpg",
+        alt: "Cages",
+        title: "Poultry Cages",
+        description: "Durable housing solutions"
+      },
+      {
+        src: "https://example.com/other4.jpg",
+        alt: "Cleaning equipment",
+        title: "Cleaning Equipment",
+        description: "Maintain hygiene standards"
+      }
+    ]
+  };
+
+  return <ProductSection {...data} />;
+};
+
+// Main Component with all products
+const Products = () => {
+  return (
+    <div className="font-sans">
+      <Feeder />
+      <Drinker />
+      <BrooderDebeaker />
+      <BirdTray />
+      <Others />
+    </div>
+  );
+};
+
+export default Products;

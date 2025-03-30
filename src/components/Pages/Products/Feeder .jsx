@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Package } from "lucide-react";
 import Banner from "../../../Banner/Banner";
-
+import cagebabyfeeder1by2kg from "../mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
+import parentfeedermale from "../mainkrishnaproducts/parentfeedermale.jpg"
 import standardfeeder10kg from "../fwdkrishnatradersproducts/standardfeeder10kg.jpg";
+import parentfeederfemale from "../mainkrishnaproducts/parentfeederfemale.jpg"
 
 const FeederShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -12,20 +14,20 @@ const FeederShowcase = () => {
 
   const feederImages = [
     {
-      src: "https://m.media-amazon.com/images/I/51q9bCwYuGL.jpg", // Replace with your actual image paths
+      src: cagebabyfeeder1by2kg, // Replace with your actual image paths
       alt: "Cage Feeder",
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2025/2/488124946/OW/AX/KG/7936473/grower-feeder-8kg.png",
-      alt: "Chain Feeding System",
+      src: parentfeedermale,
+      alt: "Parent Feeder Male",
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2024/10/458933800/QR/TQ/BL/227480048/jumbo-male-parent-feeder-500x500.jpg",
-      alt: "Tube Feeder",
+      src: parentfeederfemale,
+      alt: "Parent Feeder Female ",
     },
     {
       src: standardfeeder10kg,
-      alt: "Automatic Feeding System",
+      alt: "Standard Feeder 10kg",
     },
   ];
 

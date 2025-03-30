@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Droplet } from "lucide-react";
-import chickdrinker3ltr from "../fwdkrishnatradersproducts/chickdrinker3ltr.jpg"
-import growerdrinker8ltr from "../fwdkrishnatradersproducts/growerdrinker8ltr.jpg"
-import jumboautomaticdrinkerclassic from "../fwdkrishnatradersproductsmain/jumboautomaticdrinkerclassic.jpg"
+import babychickendrinker25ltr from "../2products/babychickendrinker25ltr.jpg"
+import nippledrinker from "../mainkrishnaproducts/nippledrinker.jpg"
+import ChickDrinker3ltr from "../mainkrishnaproducts/ChickDrinker3ltr.jpg"
+import cagebabydrinker1by2Ltr from "../mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
 
 
 import Banner from "@/Banner/Banner";
@@ -15,19 +16,19 @@ const DrinkerShowcase = () => {
   // Add image data at the top of your component
   const drinkerImages = [
     {
-      src: "https://5.imimg.com/data5/YS/OB/MY-1086680/3-litre-chick-drinker-500x500.jpg", // Replace with your actual image paths
-      alt: "Chick Drinker",
+      src: babychickendrinker25ltr, // Replace with your actual image paths
+      alt: "Baby Chicken Drinker 2.5 ltr",
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2025/2/488123872/LE/KY/PM/7936473/grower-drinker-8-ltr.png",
-      alt: "Grower Drinker",
+      src: nippledrinker,
+      alt: "Nipple Drinker ",
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2021/1/TM/WJ/MI/3288869/jumbo-drinker-set.jpg",
-      alt: "Parent Drinker",
+      src: ChickDrinker3ltr,
+      alt: "Chick Drinker 3ltr",
     },
     {
-      src: "https://5.imimg.com/data5/SELLER/Default/2023/6/320536159/FH/IG/SW/191118674/250ml-jumbo-pvc-broiler-drinker.jpg",
+      src: cagebabydrinker1by2Ltr,
       alt: "drinker"
     }
     
