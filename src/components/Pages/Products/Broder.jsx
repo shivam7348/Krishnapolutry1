@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Banner from "@/Banner/Banner";
 
 // Import images
-import vaccinator from "../mainkrishnaproducts/vaccinator.jpg";
-import foogersingle from "../2products/foogersingle.jpg";
-import sprinkler from "../2products/sprinkler.jpg";
 import broader from "../mainkrishnaproducts/broader.jpg";
-import chicktransporationbox from "../mainkrishnaproducts/chicktransporationbox.jpg";
+// import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
+// import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
+
+import debeakermachinemanual from "../mainkrishnaproducts/debeakermachinemanual.jpg" 
+import debeakingmachineautimatic from "../mainkrishnaproducts/debeakingmachineautimatic.jpg" 
 
 const OthersShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -19,31 +20,26 @@ const OthersShowcase = () => {
 
   // Image data
   const otherImages = [
-    {
-      src: vaccinator,
-      alt: "Poultry Vaccinator",
-      description: "High-precision vaccinator for efficient poultry immunization"
-    },
-    {
-      src: foogersingle,
-      alt: "Fooger System",
-      description: "Single unit fooger for controlled misting in poultry farms"
-    },
-    {
-      src: sprinkler,
-      alt: "Sprinkler System",
-      description: "Automated sprinklers for optimal farm temperature control"
-    },
+   
+   
     {
       src: broader,
       alt: "Poultry Broader",
       description: "Professional-grade broader for chick rearing"
     },
     {
-      src: chicktransporationbox,
-      alt: "Chick Transportation Box",
-      description: "Secure and ventilated boxes for safe chick transport"
+      src: debeakermachinemanual,
+      alt: "Poultry Broader",
+      description: "Professional-grade broader for chick rearing"
+
+    },
+    {
+      src: debeakingmachineautimatic,
+      alt: "Poultry Broader",
+      description: "Professional-grade broader for chick rearing"
+
     }
+    
   ];
 
   const features = [
@@ -124,7 +120,7 @@ const OthersShowcase = () => {
   return (
     <>
       <Banner
-        title="Premium Poultry Equipment"
+        title="Premium Brooder and Debeaker Equipment"
         image="https://media.istockphoto.com/id/478287121/photo/chickens-on-traditional-free-range-poultry-farm.jpg?s=612x612&w=0&k=20&c=6pIj6E6VgJ9XNHv1C4Pjtd20pzZ_9w4np1k6HVtZK9I="
         breadcrumbItems={breadcrumb}
       />

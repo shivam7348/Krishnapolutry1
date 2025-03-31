@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+
+
+
+
 import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
 import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
 import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
@@ -13,6 +17,7 @@ import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
 import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
 import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.jpg"
 import belldrinkercls from "../Pages/mainkrishnaproducts/belldrinkercls.jpg"
+import GrowerDrinker8Ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8Ltr.jpg"
 
 // broader img 
 import broader from "../Pages/mainkrishnaproducts/broader.jpg"
@@ -31,6 +36,7 @@ import BirdTransporation from "../Pages/mainkrishnaproducts/BirdTransporation.jp
 
 
 
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Card,  CardHeader } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
@@ -39,7 +45,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 const productData = {
   equipment: [
     {
-      name: "Parent Stock Feeder",
+      name: "Standard Feeder 10 kg",
       image: standardfeeder10kg,
       description: "Advanced feeder for parent stock management",
       link: "parent-stock-feeder",
@@ -51,21 +57,16 @@ const productData = {
       description: "Temperature-controlled brooding solution",
       link: "gas-brooder",
     },
+    
     {
-      name: "Manual Debeaking Machine",
-      image: "https://5.imimg.com/data5/QV/WO/MY-7081905/debreaking-machine-500x500.jpg",
-      description: "Reliable manual debeaking equipment",
-      link: "manual-debeaker",
-    },
-    {
-      name: "Chick Transport Crate",
-      image: "https://5.imimg.com/data5/SELLER/Default/2021/4/NF/ZG/BP/75172025/chick-transportation-box.jpg",
+      name: "belldrinkercls",
+      image: belldrinkercls,
       description: "Safe and secure chick transportation",
       link: "chick-crate",
     },
     {
       name: "Grower Drinker 8L",
-      image: "https://5.imimg.com/data5/SELLER/Default/2025/2/488123687/YQ/JT/YY/7936473/grower-drinker-8-ltr-500x500.png",
+      image: GrowerDrinker8Ltr,
       description: "Large capacity drinker for growing birds",
       link: "grower-drinker",
     },
@@ -73,25 +74,31 @@ const productData = {
   feeders: [
     {
       name: "Chick Feeder 3kg",
-      image: "https://m.media-amazon.com/images/I/51ciDHPSB1L.jpg",
+      image: standardfeeder10kg,
       description: "Efficient feeding solution for chicks",
       link: "chick-feeder",
     },
     {
-      name: "Chick Drinker 3L",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROmPY9oJgCQgUwof7LiBQM5WTnocZ0CEDeej0DUvVbuZZPkCNfGt8-S1t00_g-GN7C4gw&usqp=CAU",
+      name: "Chick Feeding Tray",
+      image: chickFeedingTray,
       description: "Easy-access drinking system for chicks",
       link: "chick-drinker",
     },
     {
       name: "Nipple Drinker",
-      image: "https://5.imimg.com/data5/IU/VV/MY-56724967/nipple-cup-500x500.jpg",
-      description: "Hygienic nipple drinking system for poultry",
-      link: "nipple-drinker",
+      image: nippledrinker,
+      description: "Energy-efficient heating solution",
+      link: "sunheater",
     },
     {
-      name: "Basin Chick Drinker",
-      image: "https://5.imimg.com/data5/SELLER/Default/2021/3/WY/IA/EI/41512075/img-20210316-154959-500x500.jpg",
+      name: "GrowerFedder8kg",
+      image: GrowerFedder8kg,
+      description: "Sturdy basin-style drinker for chicks",
+      link: "basin-drinker",
+    },
+    {
+      name: "Flamegun4way",
+      image: flamegun4way,
       description: "Sturdy basin-style drinker for chicks",
       link: "basin-drinker",
     },
@@ -99,16 +106,43 @@ const productData = {
   accessories: [
     {
       name: "Vaccinator",
-      image: "https://5.imimg.com/data5/SELLER/Default/2023/7/328784861/UD/PN/WA/193142091/poultry-vaccinator-500x500.jpg",
+      image: vaccinator,
       description: "Precision vaccination equipment for poultry",
       link: "poultry-vaccinator",
     },
     {
       name: "Sunheater",
-      image: "https://m.media-amazon.com/images/I/616f-8I+NqL.jpg",
+      image: sunheaterwithTimer,
       description: "Energy-efficient heating solution",
       link: "sunheater",
     },
+    {
+      name: "sprinkler",
+      image: sprinkler,
+      description: "Energy-efficient heating solution",
+      link: "sunheater",
+    },
+    {
+      name: "Nipple Drinker",
+      image: nippledrinker,
+      description: "Energy-efficient heating solution",
+      link: "sunheater",
+    },
+    {
+      name: "Debeaking Machine Automatic",
+      image: debeakingmachineautimatic,
+      description: "Energy-efficient heating solution",
+      link: "sunheater",
+
+    },
+    {
+      name: "Debeaker Machine Manual",
+      image: debeakermachinemanual,
+      description: "Energy-efficient heating solution",
+      link: "sunheater",
+
+    },
+   
   ],
 };
 

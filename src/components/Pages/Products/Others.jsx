@@ -8,6 +8,13 @@ import sprinkler from "../2products/sprinkler.jpg";
 import broader from "../mainkrishnaproducts/broader.jpg";
 import chicktransporationbox from "../mainkrishnaproducts/chicktransporationbox.jpg";
 
+
+
+import sunheaterwithTimer from "../2products/sunheaterwithTimer.jpg"
+import flamegun4way from "../2products/flamegun4way.jpg"
+import eggtray from "../mainkrishnaproducts/eggtray.jpg"
+import BirdTransporation from "..//mainkrishnaproducts/BirdTransporation.jpg"
+
 const OthersShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
   const breadcrumb = [{ name: "Home", link: "/", active: true }];
@@ -31,7 +38,19 @@ const OthersShowcase = () => {
       alt: "Broader",
     },
     {
-      src: chicktransporationbox,
+      src: sunheaterwithTimer,
+      alt: "Chick Transporationbox",
+    },
+    {
+      src: flamegun4way,
+      alt: "Chick Transporationbox",
+    },
+    {
+      src: eggtray,
+      alt: "Chick Transporationbox",
+    },
+    {
+      src: BirdTransporation,
       alt: "Chick Transporationbox",
     },
   ];

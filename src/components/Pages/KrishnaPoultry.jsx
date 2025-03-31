@@ -6,6 +6,7 @@ import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.
 import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
 import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
 import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
+import u from "../Pages/2products/20211230201513.jpg"
 
 // drinker Img
 import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
@@ -204,6 +205,13 @@ export const Feeder = () => {
         alt: "Cage Baby Feeder",
         title: "Cage Baby Feeder 1/2 kg",
         description: "Smart feeding technology for precision nutrition"
+      },
+      {
+        src: u,
+        alt: "Cage Baby Feeder",
+        title: "Cage Baby Feeder 1/2 kg",
+        description: "Smart feeding technology for precision nutrition"
+
       },
       {
         src: parentfeedermale,
