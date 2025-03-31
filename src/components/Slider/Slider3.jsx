@@ -72,7 +72,7 @@ const ProductAutoSlider = () => {
         },
         { 
           url: cagebabydrinker1by2Ltr, 
-          name: "Cage Baby Drinker (0.5L)",
+          name: "Cage Baby Drinker (1/2L)",
           description: "Compact design for cage systems"
         },
         { 
