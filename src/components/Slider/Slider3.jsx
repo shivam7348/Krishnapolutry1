@@ -62,7 +62,7 @@ const ProductAutoSlider = () => {
       products: [
         { 
           url: babychickendrinker25ltr, 
-          name: "Baby Chicken Drinker (2.5L)",
+          name: "Basin Chic Drinker (2.5Ltr)",
           description: "Ideal starter for young poultry"
         },
         { 
