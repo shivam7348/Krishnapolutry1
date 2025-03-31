@@ -1,58 +1,56 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-//feeder
-import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
-import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
-import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
-import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
+// Feeder images
+import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg";
+import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg";
+import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg";
+import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg";
 
-// drinker
-import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
-import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
-import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
-import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
+// Drinker images
+import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg";
+import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg";
+import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg";
+import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg";
 
-// others 
-import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
-import foogersingle from "../Pages/2products/foogersingle.jpg"
-import sprinkler from "../Pages/2products/sprinkler.jpg"
-import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
-import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
-import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
-import flamegun4way from "../Pages/2products/flamegun4way.jpg"
+// Other equipment images
+import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg";
+import foogersingle from "../Pages/2products/foogersingle.jpg";
+import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg";
+import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg";
 
-// Background images
+// Background slider images
 import slider1 from "../Slider/sloider1.png";
 import slider2 from "../Slider/slider2.png";
 import slider3 from "../Slider/slider4.png";
 
 const ProductAutoSlider = () => {
+  // Slide data with improved product information
   const slides = [
     {
       id: 1,
       title: "Krishna Poultry Equipments",
-      subtitle: "Premium Poultry Equipment Manufacturer & Supplier",
+      subtitle: "Premium Poultry Solutions",
       products: [
         { 
           url: cagebabyfeeder1by2kg, 
-          name: "GROWER DRINKER (8 LTR)",
-          description: "High-capacity drinking solution for growing poultry"
+          name: "Cage Baby Feeder (0.5kg)",
+          description: "Sturdy plastic feeder for cage systems"
         },
         { 
           url: parentfeedermale, 
-          name: "CHICK DRINKER (3 LTR)",
-          description: "Perfect for young chicks with easy access"
+          name: "Parent Feeder (Male)",
+          description: "Durable feeder for breeding males"
         },
         { 
           url: parentfeederfemale, 
-          name: "TURBO FEEDER",
-          description: "Efficient feed distribution system"
+          name: "Parent Feeder (Female)",
+          description: "Specialized feeder for laying hens"
         },
         { 
           url: chickFeedingTray, 
-          name: "VACCINATOR",
-          description: "Large capacity circular feeding solution"
+          name: "Chick Feeding Tray",
+          description: "Perfect starter for newborn chicks"
         }
       ],
       bgImage: slider1,
@@ -64,23 +62,23 @@ const ProductAutoSlider = () => {
       products: [
         { 
           url: babychickendrinker25ltr, 
-          name: "Baby Chicken Drinker2.5 ltr",
-          description: "Ideal starter feeder for young poultry"
+          name: "Baby Chicken Drinker (2.5L)",
+          description: "Ideal starter for young poultry"
         },
         { 
           url: nippledrinker, 
-          name: "NIPPLE DRINKER",
+          name: "Nipple Drinker",
           description: "Hygienic water delivery system"
         },
         { 
           url: cagebabydrinker1by2Ltr, 
-          name: "Cage Baby Drinker1by2Ltr",
-          description: "Self-regulating water supply"
+          name: "Cage Baby Drinker (0.5L)",
+          description: "Compact design for cage systems"
         },
         { 
           url: jumboautomaticdrinker, 
           name: "Jumbo Automatic Drinker",
-          description: "Safe transport and handling"
+          description: "Large capacity automatic system"
         }
       ],
       bgImage: slider2,
@@ -92,29 +90,30 @@ const ProductAutoSlider = () => {
       products: [
         { 
           url: vaccinator, 
-          name: "VACCINATOR",
+          name: "Vaccinator",
           description: "Precision vaccination equipment"
         },
         { 
           url: foogersingle, 
-          name: "Fooger Single",
+          name: "Fogger Single",
           description: "Sanitation and disinfection tool"
         },
         { 
           url: debeakermachinemanual, 
-          name: "Debeaker Machine Manual",
-          description: "Durable poultry transport solution"
+          name: "Manual Debeaker",
+          description: "Precision debeaking tool"
         },
         { 
           url: debeakingmachineautimatic, 
-          name: "Debeaking Machine Autimatic",
-          description: "Cooling and misting system"
+          name: "Automatic Debeaker",
+          description: "Efficient automated solution"
         }
       ],
       bgImage: slider3,
     }
   ];
 
+  // State and ref declarations
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -245,6 +244,7 @@ const ProductAutoSlider = () => {
   // Touch handlers
   const handleTouchStart = (e) => {
     touchRef.current.startX = e.touches[0].clientX;
+    setIsPaused(true);
   };
   
   const handleTouchMove = (e) => {
@@ -260,6 +260,8 @@ const ProductAutoSlider = () => {
     } else if (endX - startX > threshold) {
       prevSlide();
     }
+    
+    setTimeout(() => setIsPaused(false), 1000);
   };
   
   // Keyboard navigation
@@ -276,7 +278,7 @@ const ProductAutoSlider = () => {
       role="region"
       aria-label="Product Showcase Slider"
     >
-      {/* Main Slider */}
+      {/* Main Slider Container */}
       <div 
         ref={slideContainerRef}
         className="w-full overflow-hidden"
@@ -286,7 +288,7 @@ const ProductAutoSlider = () => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="relative w-full h-auto min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
+        <div className="relative w-full h-auto min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
           {slides.map((slide, slideIndex) => (
             <div
               key={slide.id}
@@ -302,49 +304,50 @@ const ProductAutoSlider = () => {
                   className="w-full h-full object-cover object-center"
                   aria-hidden="true"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/70"></div>
               </div>
               
               <div className="relative w-full h-full flex flex-col z-10">
                 {/* Slide Header */}
-                <div className="text-center pt-12 pb-8 md:pt-16 md:pb-12 px-4">
-                  <h2 className="slide-title text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 tracking-tight leading-tight">
+                <div className="text-center pt-8 pb-6 sm:pt-12 sm:pb-8 md:pt-16 md:pb-12 px-4">
+                  <h2 className="slide-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-3 tracking-tight leading-tight">
                     {slide.title}
                   </h2>
                   {slide.subtitle && (
-                    <p className="slide-subtitle text-sm md:text-base text-white/90 max-w-2xl mx-auto font-medium tracking-wide">
+                    <p className="slide-subtitle text-xs sm:text-sm md:text-base text-white/90 max-w-2xl mx-auto font-medium tracking-wide">
                       {slide.subtitle}
                     </p>
                   )}
                 </div>
                 
-                {/* Enhanced Products Grid */}
-                <div className="flex-1 flex items-center justify-center px-4 pb-16">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-5xl px-4">
+                {/* Products Grid - Responsive layout */}
+                <div className="flex-1 flex items-center justify-center px-2 sm:px-4 pb-12 sm:pb-16">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 md:gap-6 w-full max-w-5xl px-2 sm:px-4">
                     {slide.products.map((product, index) => (
                       <div 
                         key={index} 
                         className="product-item flex flex-col items-center group"
                       >
-                        {/* Enhanced Product Card with White Background */}
-                        <div className="bg-white rounded-xl shadow-lg p-4 w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 overflow-hidden">
-                          {/* Image Container with White Background */}
-                          <div className="bg-white rounded-lg p-3 flex-1 flex items-center justify-center mb-3">
+                        {/* Product Card */}
+                        <div className="bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg p-2 sm:p-3 md:p-4 w-full h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100 overflow-hidden">
+                          {/* Image Container */}
+                          <div className="bg-white rounded-md sm:rounded-lg p-2 sm:p-3 flex-1 flex items-center justify-center mb-2 sm:mb-3">
                             <img
                               src={product.url}
                               alt={product.name}
-                              className="max-h-[120px] md:max-h-[150px] w-auto object-fit transition-transform duration-500 group-hover:scale-105"
+                              className="h-auto max-h-[80px] sm:max-h-[100px] md:max-h-[130px] w-full object-contain transition-transform duration-500 group-hover:scale-105"
                               loading="lazy"
                             />
                           </div>
                           
                           {/* Product Info */}
                           <div className="text-center">
-                            <h3 className="text-sm md:text-base font-bold text-gray-600 mb-1">
+                            <h3 className="text-xs sm:text-sm md:text-base font-bold text-gray-600 leading-tight sm:leading-normal">
                               {product.name}
                             </h3>
-                           
-                           
+                            <p className="hidden sm:block text-xs text-gray-500 mt-1">
+                              {product.description}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -358,33 +361,33 @@ const ProductAutoSlider = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-1 sm:p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
             disabled={isAnimating}
             aria-label="Previous slide"
           >
-            <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-1 sm:p-2 md:p-3 rounded-full shadow-lg z-10 flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-white/30"
             disabled={isAnimating}
             aria-label="Next slide"
           >
-            <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Navigation Dots */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-1 sm:space-x-2 z-10">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                   currentIndex === index 
                     ? "bg-white scale-150" 
                     : "bg-white/50 hover:bg-white/80"
