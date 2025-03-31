@@ -34,7 +34,7 @@ const ProductAutoSlider = () => {
       products: [
         { 
           url: cagebabyfeeder1by2kg, 
-          name: "Cage Baby Feeder (0.5kg)",
+          name: "Cage Baby Feeder (1/2kg)",
           description: "Sturdy plastic feeder for cage systems"
         },
         { 
@@ -72,7 +72,7 @@ const ProductAutoSlider = () => {
         },
         { 
           url: cagebabydrinker1by2Ltr, 
-          name: "Cage Baby Drinker (1/2L)",
+          name: "Cage Baby Drinker (1/2Ltr)",
           description: "Compact design for cage systems"
         },
         { 
