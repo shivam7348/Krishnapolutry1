@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Package } from "lucide-react";
 import Banner from "@/Banner/Banner";
-import chickcrate from "../mainkrishnaproducts/chickcrate.png";
+
 import EggTray from "../mainkrishnaproducts/EggTray.png";
 import ChickTransporationbox from "../mainkrishnaproducts/ChickTransporationbox.png";
+import ChickCrate from "../mainkrishnaproducts/ChickCrate.jpg";
+
 
 const BirdTrayShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -12,7 +14,7 @@ const BirdTrayShowcase = () => {
   // Image data with descriptions
   const trayImages = [
     {
-      src: chickcrate,
+      src: ChickCrate,
       alt: "Chick Crate",
       description: "Durable chick crates designed for safe transportation of young poultry with proper ventilation."
     },
