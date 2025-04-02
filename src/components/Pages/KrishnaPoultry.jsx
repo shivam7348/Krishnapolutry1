@@ -9,7 +9,6 @@ import StandardFeeder10kg from "../Pages/mainkrishnaproducts/StandardFeeder10kg.
 import GrowerFeeder8kg from "../Pages/mainkrishnaproducts/GrowerFeeder8kg.png"
 import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
 
-
 // drinker Img
 import BellAutomaticGunDrinker from "../Pages/mainkrishnaproducts/BellAutomaticGunDrinker.png"
 import JumboAutomaticDrinkerClassic from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
@@ -34,22 +33,6 @@ import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
 import ClockHumidityHTC from "../Pages/mainkrishnaproducts/ClockHumidityHTC.png"
 import Eleven from "../Pages/mainkrishnaproducts/Eleven.png"
 import DigitalThermomometer from "../Pages/mainkrishnaproducts/DigitalThermomometer.png"
-
-
-
-
-// spinkler 
-
-import SprinklerSmall from "../Pages/mainkrishnaproducts/SprinklerSmall.png"
-import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
-import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
-import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
-
-
-
-
-
-
 
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -78,24 +61,23 @@ const itemVariants = {
   }
 };
 
-// Product Card Component
+// Improved Product Card Component
 const ProductCard = ({ image, index }) => (
   <motion.div 
     variants={itemVariants}
-    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+    className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full"
   >
-    <div className="relative h-72 overflow-hidden">
+    <div className="relative pt-[100%] overflow-hidden bg-gray-100"> {/* Maintain aspect ratio */}
       <img 
         src={image.src} 
         alt={image.alt} 
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        className="absolute top-0 left-0 w-full h-full object-contain p-4" /* Changed to object-contain */
+        loading="lazy" /* Lazy loading for better performance */
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-        <span className="text-white font-medium">{image.description}</span>
-      </div>
     </div>
-    <div className="p-5">
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">{image.title}</h3>
+    <div className="p-4 flex flex-col flex-grow">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">{image.title}</h3>
+      <p className="text-gray-600 text-sm mt-auto">{image.description}</p>
     </div>
   </motion.div>
 );
@@ -107,23 +89,21 @@ const SectionHeader = ({ title, description }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
     viewport={{ once: true, margin: "-100px" }}
-    className="mb-12"
+    className="mb-10 text-center md:text-left"
   >
-    <h2 className="text-4xl font-bold text-gray-900 mb-4 relative inline-block ">
+    <h2 className="text-3xl font-bold text-gray-900 mb-3">
       {title}
-      <span className="absolute bottom-0 left-0 w-1/3 h-1 bg-blue-500"></span>
+      <span className="block w-16 h-1 bg-blue-500 mx-auto md:mx-0 mt-2"></span>
     </h2>
-    <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
+    <p className="text-gray-600 max-w-3xl mx-auto md:mx-0">
       {description}
     </p>
   </motion.div>
 );
 
-// Product Component Template with Pagination
-// Updated ProductSection component with fixed animation on pagination
+// Improved ProductSection component
 const ProductSection = ({ title, description, images }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [animationKey, setAnimationKey] = useState(0); // Add this line
   const itemsPerPage = 4;
   const totalPages = Math.ceil(images.length / itemsPerPage);
   
@@ -133,28 +113,19 @@ const ProductSection = ({ title, description, images }) => {
   );
 
   const nextPage = () => {
-    setCurrentPage((prev) => {
-      const newPage = (prev + 1) % totalPages;
-      setAnimationKey(prevKey => prevKey + 1); // Reset animation key
-      return newPage;
-    });
+    setCurrentPage((prev) => (prev + 1) % totalPages);
   };
 
   const prevPage = () => {
-    setCurrentPage((prev) => {
-      const newPage = (prev - 1 + totalPages) % totalPages;
-      setAnimationKey(prevKey => prevKey + 1); // Reset animation key
-      return newPage;
-    });
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
   const goToPage = (page) => {
     setCurrentPage(page);
-    setAnimationKey(prevKey => prevKey + 1); // Reset animation key
   };
 
   return (
-    <section className="py-16 px-6 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <SectionHeader title={title} description={description} />
         
@@ -163,14 +134,14 @@ const ProductSection = ({ title, description, images }) => {
             <>
               <button
                 onClick={prevPage}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
                 aria-label="Previous products"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700" />
               </button>
               <button
                 onClick={nextPage}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100 transition-colors"
                 aria-label="Next products"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700" />
@@ -178,28 +149,26 @@ const ProductSection = ({ title, description, images }) => {
             </>
           )}
           
-          {/* Add key prop to force re-render and re-animate */}
           <motion.div
-            key={animationKey} // This ensures animations replay on page change
+            key={currentPage} // Use currentPage as key to reset animation
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {currentImages.map((image, index) => (
-              <ProductCard key={`${image.title}-${index}-${currentPage}`} image={image} index={index} />
+              <ProductCard key={`${image.title}-${index}`} image={image} index={index} />
             ))}
           </motion.div>
           
           {images.length > itemsPerPage && (
-            <div className="flex justify-center mt-6 space-x-2">
+            <div className="flex justify-center mt-8 space-x-2">
               {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToPage(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentPage ? 'bg-blue-500' : 'bg-gray-300'
+                    index === currentPage ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to page ${index + 1}`}
                 />
@@ -211,59 +180,55 @@ const ProductSection = ({ title, description, images }) => {
     </section>
   );
 };
+
 // Feeder Component
-
-
 export const Feeder = () => {
   const data = {
-    title: "Poultry Feeders Equipments",
-    description: "Engineered for efficiency and durability, our poultry feeders minimize waste while ensuring optimal feed accessibility. Designed with precision to meet the needs of modern poultry operations at any scale.",
+    title: "Poultry Feeders",
+    description: "High-quality feeders designed for optimal poultry nutrition and minimal waste.",
     images: [
       {
         src: CageBabyFeeder1andhalgkg,
         alt: "Cage Baby Feeder",
-        title: "Cage Baby Feeder 1/2.kg",
-        description: "Smart feeding technology for precision nutrition"
+        title: "Cage Baby Feeder 1/2 kg",
+        description: "Perfect for small chicks with precise portion control"
       },
       {
         src: TurboFeeder5kg,
-        alt: "Turbo Feeder 5.k.g",
-        title: "Turbo Feeder 5.k.g",
-        description: "Smart feeding technology for precision nutrition"
-
+        alt: "Turbo Feeder",
+        title: "Turbo Feeder 5 kg",
+        description: "High-capacity feeder for growing poultry"
       },
       {
         src: ParentFeederFemale,
-        alt: "Parent Feeder Male",
+        alt: "Parent Feeder Female",
         title: "Parent Feeder Female",
-        description: "Optimized for high-density poultry housing"
+        description: "Specialized design for breeding hens"
       },
       {
         src: ParenetFeederMale,
-        alt: "Standard Feeder",
-        title: "Parenet Feeder Male",
-        description: "Industrial-grade construction for longevity"
+        alt: "Parent Feeder Male",
+        title: "Parent Feeder Male",
+        description: "Durable construction for breeding roosters"
       },
       {
         src: StandardFeeder10kg,
-        alt: "StandardFeeder10kg",
-        title: "Standard Feeder 10.k.g",
-        description: "Specialized design for optimal chick development"
+        alt: "Standard Feeder",
+        title: "Standard Feeder 10 kg",
+        description: "Versatile feeder for all poultry types"
       },
       {
         src: GrowerFeeder8kg,
-        alt: "Parent Feeder Female",
-        title: "Grower Feeder 8.kg",
-        description: "Specialized design for optimal chick development"
+        alt: "Grower Feeder",
+        title: "Grower Feeder 8 kg",
+        description: "Ideal for adolescent poultry"
       },
       {
         src: ChickFeeder3kg,
-        alt: "ChickFeeder3kg",
-        title: "Chick Feeder 3.kg",
-        description: "Specialized design for optimal chick development"
+        alt: "Chick Feeder",
+        title: "Chick Feeder 3 kg",
+        description: "Starter feeder for newborn chicks"
       },
-     
-    
     ]
   };
 
@@ -271,66 +236,59 @@ export const Feeder = () => {
 };
 
 // Drinker Component
-
-
 export const Drinker = () => {
   const data = {
-    title: "Advanced Poultry Drinkers",
-    description: "Our innovative drinking systems promote poultry health through clean, accessible water delivery. Engineered to reduce contamination and water waste while ensuring constant hydration.",
+    title: "Poultry Drinkers",
+    description: "Innovative water systems designed for hygiene and easy access.",
     images: [
       {
         src: BellAutomaticGunDrinker,
-        alt: "BellAutomaticGunDrinker",
-        title: "Bell Automatic Gun Drinker",
-        description: "Continuous water circulation technology"
+        alt: "Bell Automatic Drinker",
+        title: "Bell Automatic Drinker",
+        description: "Reliable water supply with clean design"
       },
       {
         src: JumboAutomaticDrinkerClassic,
-        alt: "JumboAutomaticDrinkerClassic",
-        title: "Jumbo Automatic Drinker Classic",
-        description: "Patented anti-leak design"
+        alt: "Jumbo Automatic Drinker",
+        title: "Jumbo Automatic Drinker",
+        description: "Large capacity for flocks"
       },
       {
         src: BasinChickDrinker2point5ltr,
-        alt: "BasinChickDrinker2point5ltr",
-        title: "Basin Chick Drinker 2.5.Ltr",
-        description: "Self-cleaning water distribution"
+        alt: "Basin Chick Drinker",
+        title: "Basin Chick Drinker 2.5L",
+        description: "Safe design for young chicks"
       },
       {
         src: GrowerDrinker8ltr,
-        alt: "GrowerDrinker8ltr",
-        title: "Grower Drinker 8.Ltr",
-        description: "Gentle water delivery for young birds"
+        alt: "Grower Drinker",
+        title: "Grower Drinker 8L",
+        description: "Perfect for growing poultry"
       },
       {
         src: CageBabyDrinker1and2ltr,
-        alt: "CageBabyDrinker1and2ltr",
-        title: "CageBabyDrinker1/2.Ltr",
-        description: "Upgraded version with larger capacity"
+        alt: "Cage Baby Drinker",
+        title: "Cage Baby Drinker 1/2L",
+        description: "Compact design for small spaces"
       },
       {
         src: ChickDrinker3ltr,
-        alt: "Baby Chicken Drinker Pro",
-        title: " Chick Drinker 3.Ltr",
-        description: "Upgraded version with larger capacity"
-
+        alt: "Chick Drinker",
+        title: "Chick Drinker 3L",
+        description: "Starter drinker for chicks"
       },
-     
       {
         src: NippleDrinker,
-        alt: "Baby Chicken Drinker Pro",
-        title: " Nipple Drinker  ",
-        description: "Upgraded version with larger capacity"
-
+        alt: "Nipple Drinker",
+        title: "Nipple Drinker",
+        description: "Hygienic water delivery system"
       },
       {
         src: JumboAutomaticDrinkerStandard,
-        alt: "Baby Chicken Drinker Pro",
-        title: "Jumbo Automatic Drinker Standard",
-        description: "Upgraded version with larger capacity"
-
+        alt: "Jumbo Standard Drinker",
+        title: "Jumbo Standard Drinker",
+        description: "Standard version for all poultry"
       },
-      
     ]
   };
 
@@ -338,59 +296,53 @@ export const Drinker = () => {
 };
 
 // Brooder & Debeaker Component
-
-
-
-
 export const BrooderDebeaker = () => {
   const data = {
-    title: "Brooder & Debeaker",
-    description: "Comprehensive solutions for poultry health management. Our precision-engineered brooders create optimal thermal environments, while our debeaking systems ensure humane, stress-free operations.",
+    title: "Brooders & Debeakers",
+    description: "Essential equipment for poultry health and management.",
     images: [
       {
         src: GasBrooder,
         alt: "Gas Brooder",
         title: "Gas Brooder",
-        description: "Energy-efficient radiant heat technology"
+        description: "Efficient heating for young poultry"
       },
       {
         src: ChickGuard30ft15ft,
-        alt: "ChickGuard30ft15ft",
-        title: "Chick Guard 30.ft,15.ft",
-        description: "Energy-efficient radiant heat technology"
+        alt: "Chick Guard",
+        title: "Chick Guard 30ft/15ft",
+        description: "Protective barrier for chicks"
       },
-      
       {
         src: DebeakingMachineAutomatic,
-        alt: "Debeaking Machine Automatic",
-        title: "Debeaking Machine Automatic",
-        description: "Temperature-controlled beak treatment"
+        alt: "Automatic Debeaker",
+        title: "Automatic Debeaker",
+        description: "Precision debeaking with safety"
       },
       {
         src: DebeakingMachineManual,
-        alt: "Manual Debeaking Machine",
-        title: "Debeaker Machine Manual",
-        description: "Ergonomic design for operator comfort"
+        alt: "Manual Debeaker",
+        title: "Manual Debeaker",
+        description: "Reliable manual option"
       },
       {
         src: SunHeaterwithTimer,
-        alt: "Manual Debeaking Machine",
+        alt: "Sun Heater",
         title: "Sun Heater with Timer",
-        description: "Ergonomic design for operator comfort"
+        description: "Programmable heating solution"
       },
       {
         src: FlameGun4,
-        alt: "FlameGun4",
-        title: "Flame Gun-4.way",
-        description: "Ergonomic design for operator comfort"
+        alt: "Flame Gun",
+        title: "Flame Gun 4-way",
+        description: "Versatile farm tool"
       },
       {
         src: ElectricBrooder,
-        alt: "ElectricBrooder",
+        alt: "Electric Brooder",
         title: "Electric Brooder",
-        description: "Ergonomic design for operator comfort"
+        description: "Clean electric heating"
       },
-      
     ]
   };
 
@@ -398,40 +350,34 @@ export const BrooderDebeaker = () => {
 };
 
 // Others Component
-
-
-
-
-
 export const Others = () => {
   const data = {
-    title: "Complete Poultry Equipment Solutions",
-    description:
-      "Our comprehensive range of poultry equipment is designed to optimize every aspect of your operation, from housing to environmental control and maintenance.",
+    title: "Poultry Accessories",
+    description: "Additional equipment for complete poultry farm management.",
     images: [
       {
         src: Vaccinator,
         alt: "Vaccinator",
         title: "Vaccinator",
-        description: "Precision vaccination equipment",
+        description: "Precision vaccination tool"
       },
       {
         src: ClockHumidityHTC,
-        alt: "Digital Hygrometer",
+        alt: "Hygrometer",
         title: "Digital Hygrometer",
-        description: "Measures temperature and humidity for optimal farm conditions.",
+        description: "Monitor farm conditions"
       },
       {
         src: Eleven,
-        alt: "Eleven Tooth Gear",
+        alt: "Gear",
         title: "Eleven Tooth Gear",
-        description: "Essential component for poultry machinery operation.",
+        description: "Machine replacement part"
       },
       {
         src: DigitalThermomometer,
-        alt: "Digital Thermometer",
-        title: "Thermometer",
-        description: "Accurate temperature measurement for farm maintenance.",
+        alt: "Thermometer",
+        title: "Digital Thermometer",
+        description: "Accurate temperature reading"
       },
     ],
   };
@@ -439,8 +385,7 @@ export const Others = () => {
   return <ProductSection {...data} />;
 };
 
-
-// Main Component with all products
+// Main Component
 const Products = () => {
   return (
     <div className="font-sans antialiased text-gray-900">
