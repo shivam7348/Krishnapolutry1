@@ -5,8 +5,13 @@ import StandardFeeder10kg from "../Pages/mainkrishnaproducts/StandardFeeder10kg.
 import GrowerFeeder8kg from "../Pages/mainkrishnaproducts/GrowerFeeder8kg.png"
 import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
 
-
+import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
+import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
 import rakingmachine from "../Pages/2products/rakingmachine.JPG"
+import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
+import ClockHumidityHTC from "../Pages/mainkrishnaproducts/ClockHumidityHTC.png"
+import Eleven from "../Pages/mainkrishnaproducts/Eleven.png"
+import DigitalThermomometer from "../Pages/mainkrishnaproducts/DigitalThermomometer.png"
 
 
 import React, { useState } from 'react';
@@ -23,8 +28,8 @@ const TopProducts = () => {
     },
     {
       id: 2,
-      name: "DEBEAKER MACHINE MANUAL",
-      category: "MACHINES",
+      name: "Parent Feeder Male",
+      category: "Feeder",
       image: ParenetFeederMale
     },
     {
@@ -38,6 +43,27 @@ const TopProducts = () => {
       name: "PARENT FEEDER FEMALE",
       category: "FEEDER",
       image: ChickFeeder3kg
+    },
+    {
+      id: 5,
+      name: "PARENT FEEDER FEMALE",
+      category: "FEEDER",
+      image: ChickFeeder3kg
+
+    },
+    {
+      id: 6,
+      name: "Fogger 4 way",
+      category: "Sprinkler",
+      image: Fogger4way
+
+    },
+    {
+      id: 7,
+      name: "Sprinkler Big",
+      category: "FEEDER",
+      image: SprinklerBig
+
     },
     
    

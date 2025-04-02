@@ -109,7 +109,7 @@ const SectionHeader = ({ title, description }) => (
     viewport={{ once: true, margin: "-100px" }}
     className="mb-12"
   >
-    <h2 className="text-4xl font-bold text-gray-900 mb-4 relative inline-block">
+    <h2 className="text-4xl font-bold text-gray-900 mb-4 relative inline-block ">
       {title}
       <span className="absolute bottom-0 left-0 w-1/3 h-1 bg-blue-500"></span>
     </h2>
@@ -222,44 +222,44 @@ export const Feeder = () => {
       {
         src: CageBabyFeeder1andhalgkg,
         alt: "Cage Baby Feeder",
-        title: "Cage Baby Feeder 1/2 kg",
+        title: "Cage Baby Feeder 1/2.kg",
         description: "Smart feeding technology for precision nutrition"
       },
       {
         src: TurboFeeder5kg,
-        alt: "Cage Baby Feeder",
-        title: "Cage Baby Feeder 1/2 kg",
+        alt: "Turbo Feeder 5.k.g",
+        title: "Turbo Feeder 5.k.g",
         description: "Smart feeding technology for precision nutrition"
 
       },
       {
         src: ParentFeederFemale,
         alt: "Parent Feeder Male",
-        title: "Parent Feeder Male",
+        title: "Parent Feeder Female",
         description: "Optimized for high-density poultry housing"
       },
       {
         src: ParenetFeederMale,
         alt: "Standard Feeder",
-        title: "Standard Feeder 10kg",
+        title: "Parenet Feeder Male",
         description: "Industrial-grade construction for longevity"
       },
       {
         src: StandardFeeder10kg,
-        alt: "Parent Feeder Female",
-        title: "Parent Feeder Female",
+        alt: "StandardFeeder10kg",
+        title: "Standard Feeder 10.k.g",
         description: "Specialized design for optimal chick development"
       },
       {
         src: GrowerFeeder8kg,
         alt: "Parent Feeder Female",
-        title: "Chick Feeding Tray",
+        title: "Grower Feeder 8.kg",
         description: "Specialized design for optimal chick development"
       },
       {
         src: ChickFeeder3kg,
-        alt: "Parent Feeder Female",
-        title: "Parent Feeder Female",
+        alt: "ChickFeeder3kg",
+        title: "Chick Feeder 3.kg",
         description: "Specialized design for optimal chick development"
       },
      
@@ -280,38 +280,38 @@ export const Drinker = () => {
     images: [
       {
         src: BellAutomaticGunDrinker,
-        alt: "Baby Chicken Drinker",
-        title: "Baby Chicken Drinker 2.5ltr",
+        alt: "BellAutomaticGunDrinker",
+        title: "Bell Automatic Gun Drinker",
         description: "Continuous water circulation technology"
       },
       {
         src: JumboAutomaticDrinkerClassic,
-        alt: "Nipple Drinker",
-        title: "Nipple Drinker",
+        alt: "JumboAutomaticDrinkerClassic",
+        title: "Jumbo Automatic Drinker Classic",
         description: "Patented anti-leak design"
       },
       {
         src: BasinChickDrinker2point5ltr,
-        alt: "Cage Baby Drinker",
-        title: "Cage Baby Drinker 1/2ltr",
+        alt: "BasinChickDrinker2point5ltr",
+        title: "Basin Chick Drinker 2.5.Ltr",
         description: "Self-cleaning water distribution"
       },
       {
         src: GrowerDrinker8ltr,
-        alt: "Jumbo Automatic Drinker",
-        title: "Jumbo Automatic Drinker",
+        alt: "GrowerDrinker8ltr",
+        title: "Grower Drinker 8.Ltr",
         description: "Gentle water delivery for young birds"
       },
       {
         src: CageBabyDrinker1and2ltr,
-        alt: "Baby Chicken Drinker Pro",
-        title: "Baby Chicken Drinker Pro",
+        alt: "CageBabyDrinker1and2ltr",
+        title: "CageBabyDrinker1/2.Ltr",
         description: "Upgraded version with larger capacity"
       },
       {
         src: ChickDrinker3ltr,
         alt: "Baby Chicken Drinker Pro",
-        title: " Chicken Drinker 3ltr",
+        title: " Chick Drinker 3.Ltr",
         description: "Upgraded version with larger capacity"
 
       },
@@ -319,14 +319,14 @@ export const Drinker = () => {
       {
         src: NippleDrinker,
         alt: "Baby Chicken Drinker Pro",
-        title: " Chicken Drinker 3ltr",
+        title: " Nipple Drinker  ",
         description: "Upgraded version with larger capacity"
 
       },
       {
         src: JumboAutomaticDrinkerStandard,
         alt: "Baby Chicken Drinker Pro",
-        title: " Chicken Drinker 3ltr",
+        title: "Jumbo Automatic Drinker Standard",
         description: "Upgraded version with larger capacity"
 
       },
@@ -355,8 +355,8 @@ export const BrooderDebeaker = () => {
       },
       {
         src: ChickGuard30ft15ft,
-        alt: "Gas Brooder",
-        title: "Gas Brooder",
+        alt: "ChickGuard30ft15ft",
+        title: "Chick Guard 30.ft,15.ft",
         description: "Energy-efficient radiant heat technology"
       },
       
@@ -375,19 +375,19 @@ export const BrooderDebeaker = () => {
       {
         src: SunHeaterwithTimer,
         alt: "Manual Debeaking Machine",
-        title: "Debeaker Machine Manual",
+        title: "Sun Heater with Timer",
         description: "Ergonomic design for operator comfort"
       },
       {
         src: FlameGun4,
-        alt: "Manual Debeaking Machine",
-        title: "Debeaker Machine Manual",
+        alt: "FlameGun4",
+        title: "Flame Gun-4.way",
         description: "Ergonomic design for operator comfort"
       },
       {
         src: ElectricBrooder,
-        alt: "Manual Debeaking Machine",
-        title: "Debeaker Machine Manual",
+        alt: "ElectricBrooder",
+        title: "Electric Brooder",
         description: "Ergonomic design for operator comfort"
       },
       
@@ -406,44 +406,39 @@ export const BrooderDebeaker = () => {
 export const Others = () => {
   const data = {
     title: "Complete Poultry Equipment Solutions",
-    description: "Our comprehensive range of poultry equipment is designed to optimize every aspect of your operation, from housing to environmental control and maintenance.",
+    description:
+      "Our comprehensive range of poultry equipment is designed to optimize every aspect of your operation, from housing to environmental control and maintenance.",
     images: [
       {
         src: Vaccinator,
         alt: "Vaccinator",
         title: "Vaccinator",
-        description: "Precision vaccination equipment"
+        description: "Precision vaccination equipment",
       },
-    
       {
         src: ClockHumidityHTC,
-        alt: "Sprinkler System",
-        title: "Bird Transporation",
-        description: "Complete farm hygiene solution"
-
-
+        alt: "Digital Hygrometer",
+        title: "Digital Hygrometer",
+        description: "Measures temperature and humidity for optimal farm conditions.",
       },
       {
         src: Eleven,
-        alt: "Sprinkler System",
-        title: "Bird Transporation",
-        description: "Complete farm hygiene solution"
-
-
+        alt: "Eleven Tooth Gear",
+        title: "Eleven Tooth Gear",
+        description: "Essential component for poultry machinery operation.",
       },
       {
         src: DigitalThermomometer,
-        alt: "Sprinkler System",
-        title: "Bird Transporation",
-        description: "Complete farm hygiene solution"
-
-
-      }
-    ]
+        alt: "Digital Thermometer",
+        title: "Thermometer",
+        description: "Accurate temperature measurement for farm maintenance.",
+      },
+    ],
   };
 
   return <ProductSection {...data} />;
 };
+
 
 // Main Component with all products
 const Products = () => {

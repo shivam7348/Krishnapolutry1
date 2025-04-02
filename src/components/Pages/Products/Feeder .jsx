@@ -23,9 +23,9 @@ const FeederShowcase = () => {
   const feederImages = [
     {
       src: CageBabyFeeder1andhalgkg,
-      alt: "Cage Baby Feeder 1.5kg",
+      alt: "Cage Baby Feeder 1/2.kg",
       description: "Compact feeder designed for chicks with precise portion control",
-      capacity: "1.5kg",
+      capacity: "1/2.kg",
       type: "Chick Starter"
     },
     {
@@ -39,33 +39,33 @@ const FeederShowcase = () => {
       src: ParentFeederFemale,
       alt: "Parent Feeder Female",
       description: "Specialized feeder for hens with ergonomic feeding access",
-      capacity: "6kg",
+      capacity: "",
       type: "Breeder"
     },
     {
       src: StandardFeeder10kg,
-      alt: "Standard Feeder 10kg",
+      alt: "Standard Feeder 10.kg",
       description: "Versatile all-purpose feeder with large capacity for growing flocks",
-      capacity: "10kg",
+      capacity: "10.kg",
       type: "Grower"
     },
     {
       src: ChickFeeder3kg,
-      alt: "Chick Feeder 3kg",
+      alt: "Chick Feeder 3.kg",
       description: "Gentle feed flow system perfect for young chicks",
       capacity: "3kg",
       type: "Chick"
     },
     {
       src: GrowerFeeder8kg,
-      alt: "Grower Feeder 8kg",
+      alt: "Grower Feeder 8.kg",
       description: "Intermediate feeder for rapidly growing birds",
       capacity: "8kg",
       type: "Grower"
     },
     {
       src: TurboFeeder5kg,
-      alt: "Turbo Feeder 5kg",
+      alt: "Turbo Feeder 5.kg",
       description: "High-efficiency design with rapid feed distribution",
       capacity: "5kg",
       type: "All-purpose"
