@@ -5,7 +5,6 @@ import Banner from "@/Banner/Banner";
 
 import Vaccinator from "../mainkrishnaproducts/Vaccinator.png";
 import ClockHumidityHTC from "../mainkrishnaproducts/ClockHumidityHTC.png";
-import Eleven from "../mainkrishnaproducts/Eleven.png";
 import DigitalThermomometer from "../mainkrishnaproducts/DigitalThermomometer.png";
 import rakingmachine from "../2products/rakingmachine.JPG";
 
