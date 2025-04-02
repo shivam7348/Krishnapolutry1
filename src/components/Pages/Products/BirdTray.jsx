@@ -4,7 +4,8 @@ import Banner from "@/Banner/Banner";
 
 import EggTray from "../mainkrishnaproducts/EggTray.png";
 import ChickTransporationbox from "../mainkrishnaproducts/ChickTransporationbox.png";
-import ChickCrate from "../mainkrishnaproducts/ChickCrate.jpg";
+// import ChickCrate from "../mainkrishnaproducts/ChickCrate.jpg";
+import ChickCrate from "../mainkrishnaproducts/ChickCrate.jpg"
 
 
 const BirdTrayShowcase = () => {
