@@ -216,6 +216,13 @@ const Header3 = () => {
                                         Brooder & Debeaker
                                     </Link>
                                     <Link 
+                                        to="/products/foggers-sprinklers" 
+                                        className="block py-2 px-4 hover:bg-blue-50 text-gray-700 border-t border-gray-100"
+                                        onClick={handleMobileProductItemClick}
+                                    >
+                                         Foogers & Sprinklers
+                                    </Link>
+                                    <Link 
                                         to="/products/bird-tray" 
                                         className="block py-2 px-4 hover:bg-blue-50 text-gray-700 border-t border-gray-100"
                                         onClick={handleMobileProductItemClick}
