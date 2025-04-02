@@ -4,10 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import Banner from "@/Banner/Banner";
 
 // Import images
-import babychickendrinker25ltr from "../2products/babychickendrinker25ltr.jpg";
-import nippledrinker from "../mainkrishnaproducts/nippledrinker.jpg";
-import ChickDrinker3ltr from "../mainkrishnaproducts/ChickDrinker3ltr.jpg";
-import cagebabydrinker1by2Ltr from "../mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg";
+
+import BellAutomaticGunDrinker from "../mainkrishnaproducts/BellAutomaticGunDrinker.png"
+import JumboAutomaticDrinkerClassic from "../mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
+import BasinChickDrinker2point5ltr from "../mainkrishnaproducts/BasinChickDrinker2point5ltr.png"
+import GrowerDrinker8ltr from "../mainkrishnaproducts/GrowerDrinker8ltr.png"
+import CageBabyDrinker1and2ltr from "../mainkrishnaproducts/CageBabyDrinker1and2ltr.png"
+import ChickDrinker3ltr from "../mainkrishnaproducts/ChickDrinker3ltr.png"
+import NippleDrinker from "../mainkrishnaproducts/NippleDrinker.png"
+import JumboAutomaticDrinkerStandard from "../mainkrishnaproducts/JumboAutomaticDrinkerStandard.png"
+
 
 const DrinkerShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -19,25 +25,46 @@ const DrinkerShowcase = () => {
   // Image data with descriptions
   const drinkerImages = [
     {
-      src: babychickendrinker25ltr,
-      alt: "Baby Chicken Drinker 2.5L",
+      src: BasinChickDrinker2point5ltr,
+      alt: "Basin Chick Drinker 2.5L",
       description: "Perfect for chicks with controlled water flow to prevent drowning"
     },
     {
-      src: nippledrinker,
-      alt: "Nipple Drinker System",
+      src: NippleDrinker,
+      alt: "Nipple Drinker ",
       description: "Hygienic water delivery system that reduces contamination"
     },
     {
       src: ChickDrinker3ltr,
-      alt: "Chick Drinker 3L",
+      alt: "Chick Drinker 3.ltr",
       description: "Medium-capacity drinker for growing flocks with easy refill"
     },
     {
-      src: cagebabydrinker1by2Ltr,
-      alt: "Cage Baby Drinker 1.5L",
+      src: CageBabyDrinker1and2ltr,
+      alt: "Cage Baby Drinker 1.2.ltr",
       description: "Compact design for cage systems with anti-leak technology"
-    }
+    },
+    {
+      src: BellAutomaticGunDrinker,
+      alt: "Bell Automatic Gun Drinker",
+      description: "Compact design for cage systems with anti-leak technology"
+    },
+    {
+      src: JumboAutomaticDrinkerClassic,
+      alt: "Jumbo Automatic Drinker Classic",
+      description: "Compact design for cage systems with anti-leak technology"
+    },
+    {
+      src: GrowerDrinker8ltr,
+      alt: "Grower Drinker 8ltr",
+      description: "Compact design for cage systems with anti-leak technology"
+    },
+    {
+      src: JumboAutomaticDrinkerStandard,
+      alt: "Jumbo Automatic Drinker Standard",
+      description: "Compact design for cage systems with anti-leak technology"
+    },
+
   ];
 
   const features = [

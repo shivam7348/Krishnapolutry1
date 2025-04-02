@@ -1,29 +1,57 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-// Feeder images
-import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg";
-import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg";
-import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg";
-import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg";
+// // Feeder images
+import CageBabyFeeder1andhalgkg from "../Pages/mainkrishnaproducts/CageBabyFeeder1andhalgkg.png"
+import ParentFeederFemale from "../Pages/mainkrishnaproducts/ParentFeederFemale.png"
+import ParenetFeederMale from "../Pages/mainkrishnaproducts/ParenetFeederMale.png"
+import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
+
+
+
 
 // Drinker images
-import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg";
-import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg";
-import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg";
-import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg";
+import JumboAutomaticDrinkerClassic from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
+import BasinChickDrinker2point5ltr from "../Pages/mainkrishnaproducts/BasinChickDrinker2point5ltr.png"
+import CageBabyDrinker1and2ltr from "../Pages/mainkrishnaproducts/CageBabyDrinker1and2ltr.png"
+import NippleDrinker from "../Pages/mainkrishnaproducts/NippleDrinker.png"
 
-// Other equipment images
-import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg";
-import foogersingle from "../Pages/2products/foogersingle.jpg";
-import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg";
-import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg";
+//broders
+import ChickGuard30ft15ft from "../Pages/mainkrishnaproducts/ChickGuard30ft15ft.png"
+import DebeakingMachineAutomatic from "../Pages/mainkrishnaproducts/DebeakingMachineAutomatic.png"
+import ElectricBrooder from "../Pages/mainkrishnaproducts/ElectricBrooder.png"
+import FlameGun4 from "../Pages/mainkrishnaproducts/FlameGun4.png"
+import SunHeaterwithTimer from "../Pages/mainkrishnaproducts/SunHeaterwithTimer.png"
+import DebeakingMachineManual from "../Pages/mainkrishnaproducts/DebeakingMachineManual.png"
+import GasBrooder from "../Pages/mainkrishnaproducts/GasBrooder.png"
+
+
+//others
+
+// import Vaccinator from "../mainkrishnaproducts/Vaccinator.png"
+// import ClockHumidityHTC from "../mainkrishnaproducts/ClockHumidityHTC.png"
+// import Eleven from "../mainkrishnaproducts/Eleven.png"
+// import DigitalThermomometer from "../mainkrishnaproducts/DigitalThermomometer.png"
+import rakingmachine from "../Pages/2products/rakingmachine.JPG"
+
+import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
+
+
+//sprinkler 
+// import SprinklerSmall from "../Pages/mainkrishnaproducts/SprinklerSmall.png"
+// import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
+// import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
+// import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
+import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
+
+
+
 
 // Background slider images
 import slider1 from "../Slider/sloider1.png";
 import slider2 from "../Slider/slider2.png";
 import slider3 from "../Slider/slider4.png";
-
+NippleDrinker
 const ProductAutoSlider = () => {
   // Slide data with improved product information
   const slides = [
@@ -33,23 +61,23 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Poultry Solutions",
       products: [
         { 
-          url: cagebabyfeeder1by2kg, 
+          url: CageBabyFeeder1andhalgkg, 
           name: "Cage Baby Feeder (1/2kg)",
           description: "Sturdy plastic feeder for cage systems"
         },
         { 
-          url: parentfeedermale, 
+          url: ParenetFeederMale, 
           name: "Parent Feeder (Male)",
           description: "Durable feeder for breeding males"
         },
         { 
-          url: parentfeederfemale, 
+          url: ParentFeederFemale, 
           name: "Parent Feeder (Female)",
           description: "Specialized feeder for laying hens"
         },
         { 
-          url: chickFeedingTray, 
-          name: "Chick Feeding Tray",
+          url: ChickFeeder3kg, 
+          name: "Chick Feeding 3 kg",
           description: "Perfect starter for newborn chicks"
         }
       ],
@@ -61,23 +89,23 @@ const ProductAutoSlider = () => {
       subtitle: "Premium Quality Poultry Feeding Solutions",
       products: [
         { 
-          url: babychickendrinker25ltr, 
+          url: BasinChickDrinker2point5ltr, 
           name: "Basin Chick Drinker (2.5Ltr)",
           description: "Ideal starter for young poultry"
         },
         { 
-          url: nippledrinker, 
+          url: NippleDrinker, 
           name: "Nipple Drinker",
           description: "Hygienic water delivery system"
         },
         { 
-          url: cagebabydrinker1by2Ltr, 
+          url: CageBabyDrinker1and2ltr, 
           name: "Cage Baby Drinker (1/2Ltr)",
           description: "Compact design for cage systems"
         },
         { 
-          url: jumboautomaticdrinker, 
-          name: "Jumbo Automatic Drinker",
+          url: JumboAutomaticDrinkerClassic, 
+          name: "Jumbo Automatic Drinker Classic",
           description: "Large capacity automatic system"
         }
       ],
@@ -89,22 +117,22 @@ const ProductAutoSlider = () => {
       subtitle: "Specialized Poultry Management Tools",
       products: [
         { 
-          url: vaccinator, 
+          url: Vaccinator, 
           name: "Vaccinator",
           description: "Precision vaccination equipment"
         },
         { 
-          url: foogersingle, 
+          url: FoggerSingle, 
           name: "Fogger Single",
           description: "Sanitation and disinfection tool"
         },
         { 
-          url: debeakermachinemanual, 
+          url: DebeakingMachineManual, 
           name: "Manual Debeaker",
           description: "Precision debeaking tool"
         },
         { 
-          url: debeakingmachineautimatic, 
+          url: DebeakingMachineAutomatic, 
           name: "Automatic Debeaker",
           description: "Efficient automated solution"
         }

@@ -2,57 +2,46 @@ import React, { useState } from "react";
 import { ArrowRight, Award, Settings, ShieldCheck, Box } from "lucide-react";
 import Banner from "@/Banner/Banner";
 
-import vaccinator from "../mainkrishnaproducts/vaccinator.jpg";
-import foogersingle from "../2products/foogersingle.jpg";
-import sprinkler from "../2products/sprinkler.jpg";
-import broader from "../mainkrishnaproducts/broader.jpg";
-import chicktransporationbox from "../mainkrishnaproducts/chicktransporationbox.jpg";
+import Vaccinator from "../mainkrishnaproducts/Vaccinator.png"
+import ClockHumidityHTC from "../mainkrishnaproducts/ClockHumidityHTC.png"
+import Eleven from "../mainkrishnaproducts/Eleven.png"
+import DigitalThermomometer from "../mainkrishnaproducts/DigitalThermomometer.png"
+import rakingmachine from "../2products/rakingmachine.JPG"
 
 
-
-import sunheaterwithTimer from "../2products/sunheaterwithTimer.jpg"
-import flamegun4way from "../2products/flamegun4way.jpg"
-import eggtray from "../mainkrishnaproducts/eggtray.jpg"
-import BirdTransporation from "..//mainkrishnaproducts/BirdTransporation.jpg"
 
 const OthersShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
   const breadcrumb = [{ name: "Home", link: "/", active: true }];
 
-  // Image data
+  // Image data with descriptions
   const otherImages = [
     {
-      src: vaccinator,
-      alt: "Fooger",
+      src: Vaccinator,
+      alt: "Vaccinator",
+      description: "Our advanced vaccinator equipment for poultry farming ensures precise and efficient vaccination of your livestock."
     },
     {
-      src: foogersingle,
-      alt: "Image 2",
+      src: rakingmachine,
+      alt: "Raking Machine",
+      description: "Our advanced vaccinator equipment for poultry farming ensures precise and efficient vaccination of your livestock."
     },
     {
-      src: sprinkler,
-      alt: "Image 2",
+      src: Eleven,
+      alt: "Eleven Tooth",
+      description: "High-quality eleven tooth gear designed for durability and smooth operation in agricultural machinery."
     },
     {
-      src: broader,
-      alt: "Broader",
+      src: ClockHumidityHTC,
+      alt: "Digital Thermometer",
+      description: "High-quality eleven tooth gear designed for durability and smooth operation in agricultural machinery."
     },
     {
-      src: sunheaterwithTimer,
-      alt: "Chick Transporationbox",
+      src: DigitalThermomometer,
+      alt: "Room Thermometer Big",
+      description: "High-quality eleven tooth gear designed for durability and smooth operation in agricultural machinery."
     },
-    {
-      src: flamegun4way,
-      alt: "Chick Transporationbox",
-    },
-    {
-      src: eggtray,
-      alt: "Chick Transporationbox",
-    },
-    {
-      src: BirdTransporation,
-      alt: "Chick Transporationbox",
-    },
+
   ];
 
   const features = [
@@ -191,21 +180,19 @@ const OthersShowcase = () => {
             </div>
 
             {/* Image Grid - Right Side (Scrollable) */}
-            <div className="space-y-4">
+            <div className="space-y-8">
               {otherImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-xl shadow-lg"
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-auto max-h-[500px] object-contain transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white text-lg font-medium">
-                      {image.alt}
-                    </p>
+                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-auto max-h-[500px] object-contain"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{image.alt}</h3>
+                    <p className="text-gray-700">{image.description}</p>
                   </div>
                 </div>
               ))}

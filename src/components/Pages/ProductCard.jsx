@@ -1,37 +1,47 @@
 import React, { useState } from "react";
 
-
-
-
-import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
-import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
-import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
-import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
-import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
-import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
+// fedder 
+import CageBabyFeeder1andhalgkg from "../Pages/mainkrishnaproducts/CageBabyFeeder1andhalgkg.png"
+import TurboFeeder5kg from "../Pages/mainkrishnaproducts/TurboFeeder5kg.png"
+import ParentFeederFemale from "../Pages/mainkrishnaproducts/ParentFeederFemale.png"
+import ParenetFeederMale from "../Pages/mainkrishnaproducts/ParenetFeederMale.png"
+import StandardFeeder10kg from "../Pages/mainkrishnaproducts/StandardFeeder10kg.png"
+import GrowerFeeder8kg from "../Pages/mainkrishnaproducts/GrowerFeeder8kg.png"
+import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
 
 // drinker Img
-import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
-import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
-import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
-import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
-import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.jpg"
-import belldrinkercls from "../Pages/mainkrishnaproducts/belldrinkercls.jpg"
-import GrowerDrinker8Ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8Ltr.jpg"
+
+import BellAutomaticGunDrinker from "../Pages/mainkrishnaproducts/BellAutomaticGunDrinker.png"
+import JumboAutomaticDrinkerClassic from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
+import BasinChickDrinker2point5ltr from "../Pages/mainkrishnaproducts/BasinChickDrinker2point5ltr.png"
+import GrowerDrinker8ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8ltr.png"
+import CageBabyDrinker1and2ltr from "../Pages/mainkrishnaproducts/CageBabyDrinker1and2ltr.png"
+import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.png"
+import NippleDrinker from "../Pages/mainkrishnaproducts/NippleDrinker.png"
+import JumboAutomaticDrinkerStandard from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerStandard.png"
 
 // broader img 
-import broader from "../Pages/mainkrishnaproducts/broader.jpg"
+
+import ChickGuard30ft15ft from "../Pages/mainkrishnaproducts/ChickGuard30ft15ft.png"
+import DebeakingMachineAutomatic from "../Pages/mainkrishnaproducts/DebeakingMachineAutomatic.png"
+import ElectricBrooder from "../Pages/mainkrishnaproducts/ElectricBrooder.png"
+import FlameGun4 from "../Pages/mainkrishnaproducts/FlameGun4.png"
+import SunHeaterwithTimer from "../Pages/mainkrishnaproducts/SunHeaterwithTimer.png"
+import DebeakingMachineManual from "../Pages/mainkrishnaproducts/DebeakingMachineManual.png"
+import GasBrooder from "../Pages/mainkrishnaproducts/GasBrooder.png"
+
 // others 
-import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
-import foogersingle from "../Pages/2products/foogersingle.jpg"
-import sprinkler from "../Pages/2products/sprinkler.jpg"
-import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
-import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
-import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
-import flamegun4way from "../Pages/2products/flamegun4way.jpg"
-import chicktransporationbox from "../Pages/mainkrishnaproducts/chicktransporationbox.jpg"
-import eggtray from "../Pages/mainkrishnaproducts/eggtray.jpg"
-import BirdTransporation from "../Pages/mainkrishnaproducts/BirdTransporation.jpg"
+import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
+import ClockHumidityHTC from "../Pages/mainkrishnaproducts/ClockHumidityHTC.png"
+import Eleven from "../Pages/mainkrishnaproducts/Eleven.png"
+import DigitalThermomometer from "../Pages/mainkrishnaproducts/DigitalThermomometer.png"
+// spinkler 
+
+import SprinklerSmall from "../Pages/mainkrishnaproducts/SprinklerSmall.png"
+import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
+import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
+import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
+
 
 
 
@@ -46,27 +56,27 @@ const productData = {
   equipment: [
     {
       name: "Standard Feeder 10 kg",
-      image: standardfeeder10kg,
+      image: StandardFeeder10kg,
       description: "Advanced feeder for parent stock management",
       link: "parent-stock-feeder",
     },
    
     {
       name: "Gas Brooder",
-      image: broader,
+      image: GasBrooder,
       description: "Temperature-controlled brooding solution",
       link: "gas-brooder",
     },
     
     {
       name: "belldrinkercls",
-      image: belldrinkercls,
+      image: BellAutomaticGunDrinker,
       description: "Safe and secure chick transportation",
       link: "chick-crate",
     },
     {
       name: "Grower Drinker 8L",
-      image: GrowerDrinker8Ltr,
+      image: GrowerDrinker8ltr,
       description: "Large capacity drinker for growing birds",
       link: "grower-drinker",
     },
@@ -74,70 +84,69 @@ const productData = {
   feeders: [
     {
       name: "Chick Feeder 3kg",
-      image: standardfeeder10kg,
+      image: StandardFeeder10kg,
       description: "Efficient feeding solution for chicks",
       link: "chick-feeder",
     },
     {
-      name: "Chick Feeding Tray",
-      image: chickFeedingTray,
+      name: "Chick Feeding 3kg",
+      image: ChickFeeder3kg,
       description: "Easy-access drinking system for chicks",
       link: "chick-drinker",
     },
-    {
-      name: "Nipple Drinker",
-      image: nippledrinker,
-      description: "Energy-efficient heating solution",
-      link: "sunheater",
-    },
+    
     {
       name: "GrowerFedder8kg",
-      image: GrowerFedder8kg,
+      image: GrowerFeeder8kg,
       description: "Sturdy basin-style drinker for chicks",
       link: "basin-drinker",
     },
     {
-      name: "Flamegun4way",
-      image: flamegun4way,
+      name: "Parenet Feeder Male",
+      image: ParenetFeederMale,
       description: "Sturdy basin-style drinker for chicks",
       link: "basin-drinker",
+
     },
+    {
+      name: "Parenet Feeder Female",
+      image: ParentFeederFemale,
+      description: "Sturdy basin-style drinker for chicks",
+      link: "basin-drinker",
+
+    }
+   
   ],
   accessories: [
     {
       name: "Vaccinator",
-      image: vaccinator,
+      image: Vaccinator,
       description: "Precision vaccination equipment for poultry",
       link: "poultry-vaccinator",
     },
     {
       name: "Sunheater",
-      image: sunheaterwithTimer,
+      image: SunHeaterwithTimer,
       description: "Energy-efficient heating solution",
       link: "sunheater",
     },
     {
-      name: "sprinkler",
-      image: sprinkler,
+      name: "Sprinkler Big",
+      image: SprinklerBig,
       description: "Energy-efficient heating solution",
       link: "sunheater",
     },
-    {
-      name: "Nipple Drinker",
-      image: nippledrinker,
-      description: "Energy-efficient heating solution",
-      link: "sunheater",
-    },
+    
     {
       name: "Debeaking Machine Automatic",
-      image: debeakingmachineautimatic,
+      image: DebeakingMachineAutomatic,
       description: "Energy-efficient heating solution",
       link: "sunheater",
 
     },
     {
       name: "Debeaker Machine Manual",
-      image: debeakermachinemanual,
+      image: DebeakingMachineManual,
       description: "Energy-efficient heating solution",
       link: "sunheater",
 
@@ -206,10 +215,17 @@ const CounterSection = () => {
 };
 
 // Enhanced Image Carousel Component
+
+
+
+
+
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [broader,    debeakingmachineautimatic, cagebabyfeeder1by2kg,parentfeederfemale,standardfeeder10kg,parentfeedermale,
-    cagebabydrinker1by2Ltr,jumboautomaticdrinker,nippledrinker,babychickendrinker25ltr
+  const images = [CageBabyFeeder1andhalgkg,    TurboFeeder5kg, ParentFeederFemale,ParenetFeederMale,StandardFeeder10kg,GrowerFeeder8kg,
+    ChickFeeder3kg,JumboAutomaticDrinkerClassic,BasinChickDrinker2point5ltr,GrowerDrinker8ltr,
+    CageBabyDrinker1and2ltr,ChickDrinker3ltr,NippleDrinker,JumboAutomaticDrinkerStandard,BellAutomaticGunDrinker,
+    ChickGuard30ft15ft,DebeakingMachineAutomatic,ElectricBrooder,FlameGun4,SunHeaterwithTimer,DebeakingMachineManual,GasBrooder,Vaccinator,ClockHumidityHTC,Eleven,DigitalThermomometer
   ];
 
   const goToPrevious = () => {

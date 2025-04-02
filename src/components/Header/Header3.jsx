@@ -107,6 +107,13 @@ const Header3 = () => {
                                         Brooder & Debeaker
                                     </Link>
                                     <Link 
+                                        to="/products/foggers-sprinklers" 
+                                        className="block px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
+                                    >
+                                        Foogers & Sprinklers
+                                    </Link>
+
+                                    <Link 
                                         to="/products/bird-tray" 
                                         className="block px-4 py-2 hover:bg-blue-50 text-gray-800 text-sm"
                                     >

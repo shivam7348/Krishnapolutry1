@@ -4,12 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Banner from "@/Banner/Banner";
 
 // Import images
-import broader from "../mainkrishnaproducts/broader.jpg";
-// import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
-// import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
+import ChickGuard30ft15ft from "../mainkrishnaproducts/ChickGuard30ft15ft.png"
+import DebeakingMachineAutomatic from "../mainkrishnaproducts/DebeakingMachineAutomatic.png"
+import ElectricBrooder from "../mainkrishnaproducts/ElectricBrooder.png"
+import FlameGun4 from "../mainkrishnaproducts/FlameGun4.png"
+import SunHeaterwithTimer from "../mainkrishnaproducts/SunHeaterwithTimer.png"
+import DebeakingMachineManual from "../mainkrishnaproducts/DebeakingMachineManual.png"
+import GasBrooder from "../mainkrishnaproducts/GasBrooder.png"
 
-import debeakermachinemanual from "../mainkrishnaproducts/debeakermachinemanual.jpg" 
-import debeakingmachineautimatic from "../mainkrishnaproducts/debeakingmachineautimatic.jpg" 
+
 
 const OthersShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");
@@ -23,22 +26,47 @@ const OthersShowcase = () => {
    
    
     {
-      src: broader,
-      alt: "Poultry Broader",
-      description: "Professional-grade broader for chick rearing"
+      src: GasBrooder,
+      alt: "Gas Brooder",
+      description: "Professional-grade Brooder for chick rearing"
     },
     {
-      src: debeakermachinemanual,
-      alt: "Poultry Broader",
+      src: DebeakingMachineManual,
+      alt: "Debeaking MachineManual ",
       description: "Professional-grade broader for chick rearing"
 
     },
     {
-      src: debeakingmachineautimatic,
-      alt: "Poultry Broader",
+      src: DebeakingMachineAutomatic,
+      alt: "Debeaking Machine Automatic ",
       description: "Professional-grade broader for chick rearing"
 
-    }
+    },
+    {
+      src: ElectricBrooder,
+      alt: " Electric Brooder  ",
+      description: "Professional-grade broader for chick rearing"
+
+    },
+    {
+      src: ChickGuard30ft15ft,
+      alt: " Electric Brooder  ",
+      description: "Professional-grade broader for chick rearing"
+
+    },
+    {
+      src: FlameGun4,
+      alt: " Flame Gun-4  ",
+      description: "Professional-grade broader for chick rearing"
+
+    },
+    {
+      src: SunHeaterwithTimer,
+      alt: " SunHeaterwith Timer   ",
+      description: "Professional-grade broader for chick rearing"
+
+    },
+
     
   ];
 

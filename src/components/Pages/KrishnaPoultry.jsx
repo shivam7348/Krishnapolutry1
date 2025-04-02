@@ -1,35 +1,52 @@
 import React, { useState } from 'react';
+
 // feederImg
-import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
-import parentfeedermale from "../Pages/mainkrishnaproducts/parentfeedermale.jpg"
-import standardfeeder10kg from "../Pages/mainkrishnaproducts/standardfeeder10kg.jpg"
-import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
-import chickFeedingTray from "../Pages/2products/chickFeedingTray.jpg"
-import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
-import u from "../Pages/2products/20211230201513.jpg"
+import CageBabyFeeder1andhalgkg from "../Pages/mainkrishnaproducts/CageBabyFeeder1andhalgkg.png"
+import TurboFeeder5kg from "../Pages/mainkrishnaproducts/TurboFeeder5kg.png"
+import ParentFeederFemale from "../Pages/mainkrishnaproducts/ParentFeederFemale.png"
+import ParenetFeederMale from "../Pages/mainkrishnaproducts/ParenetFeederMale.png"
+import StandardFeeder10kg from "../Pages/mainkrishnaproducts/StandardFeeder10kg.png"
+import GrowerFeeder8kg from "../Pages/mainkrishnaproducts/GrowerFeeder8kg.png"
+import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
+
 
 // drinker Img
-import babychickendrinker25ltr from "../Pages/2products/babychickendrinker25ltr.jpg"
-import nippledrinker from "../Pages/mainkrishnaproducts/nippledrinker.jpg"
-import jumboautomaticdrinker from "../Pages/2products/jumboautomaticdrinker.jpg"
-import cagebabydrinker1by2Ltr from "../Pages/mainkrishnaproducts/cagebabydrinker1by2Ltr.jpg"
-import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.jpg"
-import belldrinkercls from "../Pages/mainkrishnaproducts/belldrinkercls.jpg"
-
+import BellAutomaticGunDrinker from "../Pages/mainkrishnaproducts/BellAutomaticGunDrinker.png"
+import JumboAutomaticDrinkerClassic from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
+import BasinChickDrinker2point5ltr from "../Pages/mainkrishnaproducts/BasinChickDrinker2point5ltr.png"
+import GrowerDrinker8ltr from "../Pages/mainkrishnaproducts/GrowerDrinker8ltr.png"
+import CageBabyDrinker1and2ltr from "../Pages/mainkrishnaproducts/CageBabyDrinker1and2ltr.png"
+import ChickDrinker3ltr from "../Pages/mainkrishnaproducts/ChickDrinker3ltr.png"
+import NippleDrinker from "../Pages/mainkrishnaproducts/NippleDrinker.png"
+import JumboAutomaticDrinkerStandard from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerStandard.png"
 
 // broader img 
-import broader from "../Pages/mainkrishnaproducts/broader.jpg"
+import ChickGuard30ft15ft from "../Pages/mainkrishnaproducts/ChickGuard30ft15ft.png"
+import DebeakingMachineAutomatic from "../Pages/mainkrishnaproducts/DebeakingMachineAutomatic.png"
+import ElectricBrooder from "../Pages/mainkrishnaproducts/ElectricBrooder.png"
+import FlameGun4 from "../Pages/mainkrishnaproducts/FlameGun4.png"
+import SunHeaterwithTimer from "../Pages/mainkrishnaproducts/SunHeaterwithTimer.png"
+import DebeakingMachineManual from "../Pages/mainkrishnaproducts/DebeakingMachineManual.png"
+import GasBrooder from "../Pages/mainkrishnaproducts/GasBrooder.png"
+
 // others 
-import vaccinator from "../Pages/mainkrishnaproducts/vaccinator.jpg"
-import foogersingle from "../Pages/2products/foogersingle.jpg"
-import sprinkler from "../Pages/2products/sprinkler.jpg"
-import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
-import debeakingmachineautimatic from "../Pages/mainkrishnaproducts/debeakingmachineautimatic.jpg"
-import sunheaterwithTimer from "../Pages/2products/sunheaterwithTimer.jpg"
-import flamegun4way from "../Pages/2products/flamegun4way.jpg"
-import chicktransporationbox from "../Pages/mainkrishnaproducts/chicktransporationbox.jpg"
-import eggtray from "../Pages/mainkrishnaproducts/eggtray.jpg"
-import BirdTransporation from "../Pages/mainkrishnaproducts/BirdTransporation.jpg"
+import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
+import ClockHumidityHTC from "../Pages/mainkrishnaproducts/ClockHumidityHTC.png"
+import Eleven from "../Pages/mainkrishnaproducts/Eleven.png"
+import DigitalThermomometer from "../Pages/mainkrishnaproducts/DigitalThermomometer.png"
+
+
+
+
+// spinkler 
+
+import SprinklerSmall from "../Pages/mainkrishnaproducts/SprinklerSmall.png"
+import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
+import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
+import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
+
+
+
 
 
 
@@ -195,66 +212,57 @@ const ProductSection = ({ title, description, images }) => {
   );
 };
 // Feeder Component
+
+
 export const Feeder = () => {
   const data = {
     title: "Poultry Feeders Equipments",
     description: "Engineered for efficiency and durability, our poultry feeders minimize waste while ensuring optimal feed accessibility. Designed with precision to meet the needs of modern poultry operations at any scale.",
     images: [
       {
-        src: cagebabyfeeder1by2kg,
+        src: CageBabyFeeder1andhalgkg,
         alt: "Cage Baby Feeder",
         title: "Cage Baby Feeder 1/2 kg",
         description: "Smart feeding technology for precision nutrition"
       },
       {
-        src: u,
+        src: TurboFeeder5kg,
         alt: "Cage Baby Feeder",
         title: "Cage Baby Feeder 1/2 kg",
         description: "Smart feeding technology for precision nutrition"
 
       },
       {
-        src: parentfeedermale,
+        src: ParentFeederFemale,
         alt: "Parent Feeder Male",
         title: "Parent Feeder Male",
         description: "Optimized for high-density poultry housing"
       },
       {
-        src: standardfeeder10kg,
+        src: ParenetFeederMale,
         alt: "Standard Feeder",
         title: "Standard Feeder 10kg",
         description: "Industrial-grade construction for longevity"
       },
       {
-        src: parentfeederfemale,
+        src: StandardFeeder10kg,
         alt: "Parent Feeder Female",
         title: "Parent Feeder Female",
         description: "Specialized design for optimal chick development"
       },
       {
-        src: chickFeedingTray,
+        src: GrowerFeeder8kg,
         alt: "Parent Feeder Female",
         title: "Chick Feeding Tray",
         description: "Specialized design for optimal chick development"
       },
       {
-        src: GrowerFedder8kg,
+        src: ChickFeeder3kg,
         alt: "Parent Feeder Female",
         title: "Parent Feeder Female",
         description: "Specialized design for optimal chick development"
       },
-      {
-        src: parentfeederfemale,
-        alt: "Parent Feeder Female",
-        title: "Parent Feeder Female",
-        description: "Specialized design for optimal chick development"
-      },
-      {
-        src: parentfeederfemale,
-        alt: "Parent Feeder Female",
-        title: "Parent Feeder Female",
-        description: "Specialized design for optimal chick development"
-      },
+     
     
     ]
   };
@@ -263,37 +271,39 @@ export const Feeder = () => {
 };
 
 // Drinker Component
+
+
 export const Drinker = () => {
   const data = {
     title: "Advanced Poultry Drinkers",
     description: "Our innovative drinking systems promote poultry health through clean, accessible water delivery. Engineered to reduce contamination and water waste while ensuring constant hydration.",
     images: [
       {
-        src: babychickendrinker25ltr,
+        src: BellAutomaticGunDrinker,
         alt: "Baby Chicken Drinker",
         title: "Baby Chicken Drinker 2.5ltr",
         description: "Continuous water circulation technology"
       },
       {
-        src: nippledrinker,
+        src: JumboAutomaticDrinkerClassic,
         alt: "Nipple Drinker",
         title: "Nipple Drinker",
         description: "Patented anti-leak design"
       },
       {
-        src: cagebabydrinker1by2Ltr,
+        src: BasinChickDrinker2point5ltr,
         alt: "Cage Baby Drinker",
         title: "Cage Baby Drinker 1/2ltr",
         description: "Self-cleaning water distribution"
       },
       {
-        src: jumboautomaticdrinker,
+        src: GrowerDrinker8ltr,
         alt: "Jumbo Automatic Drinker",
         title: "Jumbo Automatic Drinker",
         description: "Gentle water delivery for young birds"
       },
       {
-        src: babychickendrinker25ltr,
+        src: CageBabyDrinker1and2ltr,
         alt: "Baby Chicken Drinker Pro",
         title: "Baby Chicken Drinker Pro",
         description: "Upgraded version with larger capacity"
@@ -307,12 +317,19 @@ export const Drinker = () => {
       },
      
       {
-        src: belldrinkercls,
+        src: NippleDrinker,
         alt: "Baby Chicken Drinker Pro",
         title: " Chicken Drinker 3ltr",
         description: "Upgraded version with larger capacity"
 
-      }
+      },
+      {
+        src: JumboAutomaticDrinkerStandard,
+        alt: "Baby Chicken Drinker Pro",
+        title: " Chicken Drinker 3ltr",
+        description: "Upgraded version with larger capacity"
+
+      },
       
     ]
   };
@@ -321,41 +338,59 @@ export const Drinker = () => {
 };
 
 // Brooder & Debeaker Component
+
+
+
+
 export const BrooderDebeaker = () => {
   const data = {
     title: "Brooder & Debeaker",
     description: "Comprehensive solutions for poultry health management. Our precision-engineered brooders create optimal thermal environments, while our debeaking systems ensure humane, stress-free operations.",
     images: [
       {
-        src: broader,
+        src: GasBrooder,
         alt: "Gas Brooder",
         title: "Gas Brooder",
         description: "Energy-efficient radiant heat technology"
       },
       {
-        src: foogersingle,
-        alt: "Fogger Single",
-        title: "Fogger Single",
-        description: "High-capacity heating for large operations"
+        src: ChickGuard30ft15ft,
+        alt: "Gas Brooder",
+        title: "Gas Brooder",
+        description: "Energy-efficient radiant heat technology"
       },
+      
       {
-        src: debeakingmachineautimatic,
-        alt: "Automatic Debeaking Machine",
+        src: DebeakingMachineAutomatic,
+        alt: "Debeaking Machine Automatic",
         title: "Debeaking Machine Automatic",
         description: "Temperature-controlled beak treatment"
       },
       {
-        src: debeakermachinemanual,
+        src: DebeakingMachineManual,
         alt: "Manual Debeaking Machine",
         title: "Debeaker Machine Manual",
         description: "Ergonomic design for operator comfort"
       },
       {
-        src: broader,
-        alt: "Gas Brooder Pro",
-        title: "Gas Brooder Pro",
-        description: "Professional grade with temperature control"
-      }
+        src: SunHeaterwithTimer,
+        alt: "Manual Debeaking Machine",
+        title: "Debeaker Machine Manual",
+        description: "Ergonomic design for operator comfort"
+      },
+      {
+        src: FlameGun4,
+        alt: "Manual Debeaking Machine",
+        title: "Debeaker Machine Manual",
+        description: "Ergonomic design for operator comfort"
+      },
+      {
+        src: ElectricBrooder,
+        alt: "Manual Debeaking Machine",
+        title: "Debeaker Machine Manual",
+        description: "Ergonomic design for operator comfort"
+      },
+      
     ]
   };
 
@@ -363,56 +398,41 @@ export const BrooderDebeaker = () => {
 };
 
 // Others Component
+
+
+
+
+
 export const Others = () => {
   const data = {
     title: "Complete Poultry Equipment Solutions",
     description: "Our comprehensive range of poultry equipment is designed to optimize every aspect of your operation, from housing to environmental control and maintenance.",
     images: [
       {
-        src: vaccinator,
+        src: Vaccinator,
         alt: "Vaccinator",
         title: "Vaccinator",
         description: "Precision vaccination equipment"
       },
+    
       {
-        src: sprinkler,
-        alt: "Sprinkler",
-        title: "Sprinkler",
-        description: "Hygiene maintenance systems"
-      },
-      {
-        src: sunheaterwithTimer,
-        alt: "Sun Heater with Timer",
-        title: "Sun Heater With Timer",
-        description: "Automated temperature control"
-      },
-      {
-        src: chicktransporationbox,
-        alt: "Chick Transportation Box",
-        title: "Chick Transportation Box",
-        description: "Safe transport for young birds"
-      },
-      {
-        src: flamegun4way,
-        alt: "Vaccinator Pro",
-        title: "Flame Gun 4 Way",
-        description: "Advanced vaccination system"
-      },
-      {
-        src: sprinkler,
+        src: ClockHumidityHTC,
         alt: "Sprinkler System",
-        title: "Sprinkler System",
+        title: "Bird Transporation",
         description: "Complete farm hygiene solution"
-      },
-      {
-        src: eggtray,
-        alt: "Sprinkler System",
-        title: "Egg Tray",
-        description: "Complete farm hygiene solution"
+
 
       },
       {
-        src: BirdTransporation,
+        src: Eleven,
+        alt: "Sprinkler System",
+        title: "Bird Transporation",
+        description: "Complete farm hygiene solution"
+
+
+      },
+      {
+        src: DigitalThermomometer,
         alt: "Sprinkler System",
         title: "Bird Transporation",
         description: "Complete farm hygiene solution"

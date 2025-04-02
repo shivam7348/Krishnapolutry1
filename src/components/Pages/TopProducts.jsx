@@ -1,11 +1,11 @@
 
-import GrowerFedder8kg from "../Pages/mainkrishnaproducts/GrowerFedder8kg.jpg"
-import parentfeederfemale from "../Pages/mainkrishnaproducts/parentfeederfemale.jpg"
-import cheekfeeder3kg from "../Pages/mainkrishnaproducts/cheekfeeder3kg.jpg"
-import broader from "../Pages/mainkrishnaproducts/broader.jpg"
-import sprinkler from "../Pages/2products/sprinkler.jpg"
-import cagebabyfeeder1by2kg from "../Pages/mainkrishnaproducts/cagebabyfeeder1by2kg.jpg"
-import debeakermachinemanual from "../Pages/mainkrishnaproducts/debeakermachinemanual.jpg"
+
+import ParenetFeederMale from "../Pages/mainkrishnaproducts/ParenetFeederMale.png"
+import StandardFeeder10kg from "../Pages/mainkrishnaproducts/StandardFeeder10kg.png"
+import GrowerFeeder8kg from "../Pages/mainkrishnaproducts/GrowerFeeder8kg.png"
+import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
+
+
 import rakingmachine from "../Pages/2products/rakingmachine.JPG"
 
 
@@ -25,43 +25,28 @@ const TopProducts = () => {
       id: 2,
       name: "DEBEAKER MACHINE MANUAL",
       category: "MACHINES",
-      image: debeakermachinemanual
+      image: ParenetFeederMale
     },
     {
       id: 3,
       name: "GROWER FEEDER (8 kg)",
       category: "FEEDER",
-      image: GrowerFedder8kg
+      image: GrowerFeeder8kg
     },
     {
       id: 4,
       name: "PARENT FEEDER FEMALE",
       category: "FEEDER",
-      image: parentfeederfemale
+      image: ChickFeeder3kg
     },
-    {
-      id: 5,
-      name: "PARENT FEEDER MALE",
-      category: "DRINKERS",
-      image: sprinkler
-    },
-    {
-      id: 6,
-      name: "BROADER",
-      category: "Feeder",
-      image: broader
-    },
-    {
-      id: 7,
-      name: "CHICK FEEDER (3 kg)",
-      category: "FEEDER",
-      image: cheekfeeder3kg
-    },
+    
+   
+    
     {
       id: 8,
       name: "CAGE BABY FEEDER (1/2KG)",
       category: "FEEDER",
-      image: cagebabyfeeder1by2kg
+      image: StandardFeeder10kg
     }
   ];
 

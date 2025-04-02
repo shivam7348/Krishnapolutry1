@@ -10,6 +10,7 @@ import Broder from "./components/Pages/Products/Broder";
 import BirdTray from "./components/Pages/Products/BirdTray";
 import Others from "./components/Pages/Products/Others";
 import PageCardDetails from "./components/Pages/PageCardDetails";
+import FoggersSprinklers from "./components/Pages/Products/FoggersSprinklers";
 
 // Import individual product pages
 
@@ -27,10 +28,7 @@ const router = createBrowserRouter([
         path: "about",
         element: <AboutUs />,
       },
-      {
-        path: "products",
-        element: <Products />,
-      },
+      
       {
         path: "products/feeder",
         element: <Feeder />,
@@ -44,6 +42,11 @@ const router = createBrowserRouter([
         element: <Broder />,
       },
       {
+        path: "products/foggers-sprinklers",
+        element: <FoggersSprinklers />
+      },
+      
+      {
         path: "products/bird-tray",
         element: <BirdTray />,
       },
@@ -55,10 +58,7 @@ const router = createBrowserRouter([
         path: "contact",
         element: <Contact />,
       },
-      {
-        path: "/product/:slug",
-        element: <PageCardDetails />,
-      },
+     
   
     ],
   },
