@@ -11,7 +11,6 @@ import FlameGun4 from "../mainkrishnaproducts/FlameGun4.png";
 import SunHeaterwithTimer from "../mainkrishnaproducts/SunHeaterwithTimer.png";
 import DebeakingMachineManual from "../mainkrishnaproducts/DebeakingMachineManual.png";
 import GasBrooder from "../mainkrishnaproducts/GasBrooder.png";
-import { homedir } from "os";
 
 const OthersShowcase = () => {
   const [activeTab, setActiveTab] = useState("features");

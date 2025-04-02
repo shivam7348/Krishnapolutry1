@@ -7,9 +7,6 @@ import ParentFeederFemale from "../Pages/mainkrishnaproducts/ParentFeederFemale.
 import ParenetFeederMale from "../Pages/mainkrishnaproducts/ParenetFeederMale.png"
 import ChickFeeder3kg from "../Pages/mainkrishnaproducts/ChickFeeder3kg.png"
 
-
-
-
 // Drinker images
 import JumboAutomaticDrinkerClassic from "../Pages/mainkrishnaproducts/JumboAutomaticDrinkerClassic.png"
 import BasinChickDrinker2point5ltr from "../Pages/mainkrishnaproducts/BasinChickDrinker2point5ltr.png"
@@ -17,31 +14,9 @@ import CageBabyDrinker1and2ltr from "../Pages/mainkrishnaproducts/CageBabyDrinke
 import NippleDrinker from "../Pages/mainkrishnaproducts/NippleDrinker.png"
 
 //broders
-import ChickGuard30ft15ft from "../Pages/mainkrishnaproducts/ChickGuard30ft15ft.png"
 import DebeakingMachineAutomatic from "../Pages/mainkrishnaproducts/DebeakingMachineAutomatic.png"
-import ElectricBrooder from "../Pages/mainkrishnaproducts/ElectricBrooder.png"
-import FlameGun4 from "../Pages/mainkrishnaproducts/FlameGun4.png"
-import SunHeaterwithTimer from "../Pages/mainkrishnaproducts/SunHeaterwithTimer.png"
 import DebeakingMachineManual from "../Pages/mainkrishnaproducts/DebeakingMachineManual.png"
-import GasBrooder from "../Pages/mainkrishnaproducts/GasBrooder.png"
-
-
-//others
-
-// import Vaccinator from "../mainkrishnaproducts/Vaccinator.png"
-// import ClockHumidityHTC from "../mainkrishnaproducts/ClockHumidityHTC.png"
-// import Eleven from "../mainkrishnaproducts/Eleven.png"
-// import DigitalThermomometer from "../mainkrishnaproducts/DigitalThermomometer.png"
-import rakingmachine from "../Pages/2products/rakingmachine.JPG"
-
 import Vaccinator from "../Pages/mainkrishnaproducts/Vaccinator.png"
-
-
-//sprinkler 
-// import SprinklerSmall from "../Pages/mainkrishnaproducts/SprinklerSmall.png"
-// import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
-// import SprinklerBig from "../Pages/mainkrishnaproducts/SprinklerBig.png"
-// import Fogger4way from "../Pages/mainkrishnaproducts/Fogger4way.png"
 import FoggerSingle from "../Pages/mainkrishnaproducts/FoggerSingle.png"
 
 
@@ -370,7 +345,7 @@ const ProductAutoSlider = () => {
                           
                           {/* Product Info */}
                           <div className="text-center">
-                            <h3 className="text-xs sm:text-sm md:text-base font-bold text-gray-600 leading-tight sm:leading-normal">
+                            <h3 className="text-xs sm:text-sm md:text-base font-bold text-gray-900 leading-tight sm:leading-normal">
                               {product.name}
                             </h3>
                             <p className="hidden sm:block text-xs text-gray-500 mt-1">

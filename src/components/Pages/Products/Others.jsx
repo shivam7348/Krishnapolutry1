@@ -28,26 +28,20 @@ const OthersShowcase = () => {
       src: rakingmachine,
       alt: "Poultry Raking Machine",
       description: "Automatic bedding management system for large coops",
-      type: "Sanitation",
+      type: "Machines",
       features: ["Stainless steel construction", "Adjustable depth", "Low maintenance"]
     },
-    {
-      src: Eleven,
-      alt: "Eleven Tooth Gear",
-      description: "High-torque transmission gear for agricultural machinery",
-      type: "Mechanical",
-      features: ["Hardened steel", "Precision machining", "Long lifespan"]
-    },
+    
     {
       src: ClockHumidityHTC,
-      alt: "Digital Hygrometer",
+      alt: "Digital Indoor Thermometer",
       description: "Multi-function environmental monitor with data logging",
       type: "Monitoring",
       features: ["Temperature tracking", "Humidity sensor", "LCD display"]
     },
     {
       src: DigitalThermomometer,
-      alt: "Industrial Thermometer",
+      alt: "Room Thermometer Big",
       description: "Large display temperature monitor for facility-wide tracking",
       type: "Monitoring",
       features: ["±0.1°C accuracy", "Wall mountable", "Alarm system"]
@@ -312,13 +306,7 @@ const OthersShowcase = () => {
                     <h3 className="text-xl font-bold text-gray-900">{image.alt}</h3>
                     <p className="text-gray-700 mt-2">{image.description}</p>
                     
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {image.features.map((feature, i) => (
-                        <span key={i} className="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
+                   
                     
                     <button
                       onClick={() => handleImageClick(image, index)}

@@ -339,13 +339,7 @@ const FoggersSprinklersShowcase = () => {
                     <div className="text-sm text-blue-600 mb-2 font-medium">{image.type}</div>
                     <p className="text-gray-700 mt-1">{image.description}</p>
                     
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {image.features.map((feature, i) => (
-                        <span key={i} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
+                   
                     
                     <button
                       onClick={() => handleImageClick(image, index)}
